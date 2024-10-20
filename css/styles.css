@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Orbitron:wght@400..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: "Orbitron", serif;
+}
+
+/*Encabezado*/
+header {
+    background-image: linear-gradient(to right, #7e7e7e, #909090, #a2a2a2, #b4b4b4, #c7c7c7, #c7c7c7, #c7c7c7, #c7c7c7, #b4b4b4, #a2a2a2, #909090, #7e7e7e);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+
+    .container_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        /*Parte izquiera del header*/
+        .container_left {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            /*Logo*/
+            .box_logo {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                cursor: default;
+    
+                h1{
+                    font-family: "Alfa Slab One", serif;
+                    text-transform: uppercase;
+                    text-shadow: 0 0 5px #fff;
+                    max-width: 100%;
+                    height: auto;
+                    font-size: 1.5rem;
+                }
+            
+    
+                .logo {
+                    width: 4rem;
+                    margin-left: 10px;
+                }
+            }
+            /*Navegacion de header*/
+            .nav_bar {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                
+                .nav_links {
+                    list-style: none;
+                    display: flex;
+
+    
+                    li {
+                        margin-left: 20px;
+
+                        a {
+                            text-decoration:none;
+                            color:#1e1e1e;
+                            font-size: 1.3rem;
+                            text-shadow: 0 0 5px #fff;
+                            font-family: "Orbitron", serif;
+                        }
+                    }
+                    }
+                }
+        }
+        /**/
+        .container_right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .nav_links {
+                display: flex;
+                list-style: none;
+
+                li {
+                    margin-right: 20px;
+
+                    svg {
+                        color: #1e1e1e;
+                    }
+                    
+                }
+
+            }
+        }
+
+
+
+
+    }
+
+    
+
+    .logo {
+        max-width: 100%;
+        height: auto;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+        color: #1e1e1e;
+        text-shadow: 0 0 7px #eaeaea;
+    }
+
+    .iconos {
+        color: #1e1e1e;
+        cursor: pointer;
+    }
+}
+
+/*Contenido*/
+
+main {
+    
+    background-color: #eaeaea;
+    font-weight: 100;
+
+    h2 {
+        font-weight: bold;
+
+    }
+
+    button {
+        background: transparent;
+        padding: 5px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}
+
+/*Pie de pagina*/
+footer  {
+    background-image: linear-gradient(to right, #7e7e7e, #909090, #a2a2a2, #b4b4b4, #c7c7c7, #c7c7c7, #c7c7c7, #c7c7c7, #b4b4b4, #a2a2a2, #909090, #7e7e7e);
+
+    .container_foot {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px 20px;
+
+
+        .container_foot_left {
+            display: block;
+
+            h4 {
+                max-width: 100%;
+                font-size: 1rem;
+                margin-bottom: 10px;
+                text-align: center;
+                text-shadow: 0 0 5px #fff;
+                cursor: default;
+            }
+
+            form {
+                max-width: 100%;
+                margin: auto;
+
+                .email {
+                    width: 80%;
+                    border: 1px solid #000;
+                    border-radius: 3px;
+                    padding: 7px;
+                }
+
+                .boton {
+                    width: 15%;
+                    margin-left: 10px;
+                    background-color: transparent;
+                    border-radius: 5px;
+                    padding: 7px;
+                }   
+            }
+
+            .redes_sociales {
+                display: flex;
+                justify-content:center;
+                align-items: center;
+
+                .redes_sociales_links{
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-around;
+                    width: 50%;
+                    margin-top: 16px;
+                    height: 4rem;
+
+                    svg {
+                        color: #1e1e1e;
+                    }
+                }
+            }
+        }
+
+        .container_foot_mid {
+            display: block;
+            width: 500px;
+            padding: 10px 20px;
+
+            .nav_foot_mid{
+                display: block;
+                
+                .nav_foot_mid_links {
+                    list-style: none;
+
+                    li {
+                        margin:10px 0;
+                        
+                        a{
+                            text-decoration: none;
+                            color: #1e1e1e;
+                            text-shadow: 0 0 5px #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .container_foot_right {
+            display: block;
+            width: 462px;
+            padding: 10px 20px;
+
+            .nav_foot_right {
+                display: block;
+
+                .nav_foot_right_links {
+                    list-style: none;
+
+                    li {
+                        margin: 10px 0;
+
+                        a {
+                            text-decoration: none;
+                            color: #1e1e1e;
+                            text-shadow: 0 0 5px #fff;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .box_logo {
+        text-align: center;
+        width: 6rem;
+        margin: auto;
+        padding: 5px;
+        
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    h6 {
+        text-align: center;
+        padding: 10px 20px;
+
+    }
+    
+}
+
+
+
+
+
+ 
+
