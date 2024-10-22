@@ -54,40 +54,81 @@
     <main>
         <!--Banner de temporada-->
         <section class="banner">
-            <img src="./assets/img/baner_verano_2025.png" alt="Baner de temporada" loading="lazy">
-
-            <video src="./assets/video/publicidad.mp4" autoplay muted loop>
-                Tu dispositivo no soporta el video
-            </video>
+            <div class="container_img_banner">
+                <img src="./assets/img/baner_verano_2025.png" alt="Baner de temporada" loading="lazy">
+            </div>
+            <div class="container_video_banner">
+                <video src="./assets/video/publicidad.mp4" autoplay muted loop>
+                    Tu dispositivo no soporta el video
+                </video>
+            </div>
         </section>
 
         <!--Todos los productos mas destacados-->
         <section class="productos_destacados">
             <h2>Lo más destacado</h2>
             
-            <!--Destacado 1-->
-            <div>
-                <img src="./assets/img/remera_over_destacada.jpeg" alt="Destacado 1" loading="lazy">
-                <h3>Remera oversize negra</h3>
-                <h4>$29.999</h4>
-                <button>COMPRAR</button>
-            </div>
-            
-            <!--Destacado 2-->
-            <div>
-                <img src="./assets/img/remera-basica-cuello-u-blanca-gola-marco-polo-1.jpg" alt="Destacado 2" loading="lazy">
-                <h3>Remera basica blanca cuello en U</h3>
-                <h4>$24.999</h4>
-                <button>COMPRAR</button>
-            </div>
+            <div class="container_destacados"> 
+                <!--Destacado 1-->
+                <div class="producto_card">
+                    <div class="container_img">
+                        <img src="./assets/img/remera_over_destacada.jpeg" alt="Destacado 1" loading="lazy">
+                    </div>
+                    <div class="container_description">
+                        <h3>Remera oversize negra</h3>
+                        <h4>$27.999</h4>
+                        <button>COMPRAR</button>
+                    </div>    
+                </div>
+                
+                <!--Destacado 2-->
+                <div class="producto_card">
+                    <div class="container_img">
+                        <img src="./assets/img/remera-basica-cuello-u-blanca-gola-marco-polo-1.jpg" 
+                        alt="Destacado 2" loading="lazy">
+                    </div>
+                    <div class="container_description">
+                        <h3>Remera básica blanca</h3>
+                        <h4>$24.999</h4>
+                        <button>COMPRAR</button>
+                    </div>
+                </div>
 
-            <!--Destacado 3-->
-            <div>
-                <img src="./assets/img/bermuda-rash.jpg" alt="Destacado 3" loading="lazy">
-                <h3>Bermuda de gabardina</h3>
-                <h4>$17.999</h4>
-                <button>COMPRAR</button>
-            </div>
+                <!--Destacado 3-->
+                <div class="producto_card">
+                    <div class="container_img">
+                        <img src="./assets/img/bermuda-rash.jpg" alt="Destacado 3" loading="lazy">
+                    </div>
+                    <div class="container_description">
+                        <h3>Bermuda de jogging</h3>
+                        <h4>$17.999</h4>
+                        <button>COMPRAR</button>
+                    </div>    
+                </div>
+                <!--Destacado 4-->
+                <div class="producto_card">
+                    <div class="container_img">
+                        <img src="./assets/img/remera_blanca_estampado.jpg" alt="Destacado 3" loading="lazy">
+                    </div>
+                    <div class="container_description">
+                        <h3>Remera West Side</h3>
+                        <h4>$24.999</h4>
+                        <button>COMPRAR</button>
+                    </div>    
+                </div>
+                
+                <!--Destacado 5-->
+                <div class="producto_card">
+                    <div class="container_img">
+                        <img src="./assets/img/camisa_hawaiana.jpg" alt="Destacado 3" loading="lazy">
+                    </div>
+                    <div class="container_description">
+                        <h3>Camisa Hwaiana</h3>
+                        <h4>$28.999</h4>
+                        <button>COMPRAR</button>
+                    </div>    
+                </div>                
+            </div>   
         </section>
 
 
