@@ -9,6 +9,8 @@
 
 }
 
+body{
+
     /*Encabezado*/
     header {
         background-image: linear-gradient(to right, #7e7e7e, #909090, #a2a2a2, #b4b4b4, #c7c7c7, #c7c7c7, #c7c7c7, #c7c7c7, #b4b4b4, #a2a2a2, #909090, #7e7e7e);
@@ -64,10 +66,11 @@
                     .nav_links {
                         list-style: none;
                         display: flex;
+                        gap: 20px;
                         
-                        
+
                         li {
-                            margin-left: 20px;
+
 
                             a {
                                 text-decoration:none;
@@ -85,14 +88,15 @@
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
+                margin-right: 20px;
 
                 .nav_links {
                     display: flex;
                     list-style: none;
+                    gap: 20px;
 
                     li {
-                        margin-right: 20px;
-
+                        
                         svg {
                             color: #1e1e1e;
                         }
@@ -148,9 +152,6 @@
 
             .container_img_banner {
                 width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 margin-bottom: 10px;
                 
                 img {
@@ -163,9 +164,6 @@
             .container_video_banner {
                 width: 100vw;
                 height: 50vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
 
                 video {
                     width: 100%;
@@ -176,6 +174,7 @@
             }
         }
 
+        /*index -> DESTACADOS*/
         .productos_destacados {
             width: 100vw;
             padding: 10px;
@@ -193,6 +192,7 @@
                 justify-content:flex-start;
                 padding: 20px;
                 align-items: center;
+                gap: 25px;
                 
 
 
@@ -204,7 +204,7 @@
                     overflow: hidden;
                     border: 1px solid #ddd;
                     border-radius: 10px;
-                    margin-left: 20px;
+                    
 
 
                     .container_img {
@@ -270,7 +270,8 @@
                 font-size: 32px;
                 font-weight: bold;
                 font-style: italic;
-                margin: 10px
+                margin: 10px;
+                cursor: default;
             }
 
             h2 {
@@ -285,6 +286,7 @@
                 justify-content:flex-start;
                 padding: 20px;
                 align-items: center;
+                gap: 25px;
                 
 
                 .producto_card {
@@ -295,7 +297,7 @@
                     overflow: hidden;
                     border: 1px solid #ddd;
                     border-radius: 10px;
-                    margin-left: 20px;
+                    
 
                     .container_img {
                         width: 100%;
@@ -349,12 +351,159 @@
             }
 
         }
-}
+
+        /*RESEÑAS*/
+        .reseñas {
+            padding: 30px 0;
+
+            h2 {
+                font-style: italic;
+                font-weight: bold;
+                font-size: 32px;
+                margin: 10px;
+            }
+
+            .container_reseñas {
+                padding: 20px;
+                display: grid;
+                gap: 20px;
+                grid-template-columns: 20% auto;
+                grid-template-rows: repeat(10,1fr);
+                grid-template-areas:"columna1 columna2"
+                                    "columna1 columna2"
+                                    "columna1 columna2"
+                                    "columna1 columna2"
+                                    "columna1 columna2"
+                                    "columna1 columna2"
+                                    "columna1 columna2"
+                                    "columna1 columna2"
+                                    "columna1 columna2"
+                                    "columna1 columna2";
+
+                .sidebar {
+                            grid-area: columna1;
+                            border-right:1px solid #ccc;
+                            text-align: center;
+                            align-content: center;
+
+                            h3 {
+                                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                font-weight: 100;
+                                font-size: 1.5rem;
+                                font-style: italic;
+                                cursor: default;
+                                padding: 10px;
+                            }
+                        }
+
+                .contenido_reseñas {
+                            grid-area: columna2;
+                            display: grid;
+                            grid-template-rows: repeat(10, 1fr);
+                            gap: 10px;
+
+                            .card {
+                                border: 1px solid #ccc;
+                                padding: 20px;
+                                background-color: #e0e0e0;
+                                border-radius: 10px;
+
+                            }   
+                        }
+
+            }
+
+
+
+            }
+        /*CONTACTO*/
+        .contacto {
+            padding: 30px 0px;
+
+            h2{
+                margin:10px;
+                font-size: 32px;
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            .container_contacto {
+                display: grid;
+                grid-template-columns: 25% auto;
+                justify-content: space-evenly   ;
+
+                .mensaje {
+                    align-content: center;
+                    padding: 10px;
+                    
+                    p {
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .formulario {
+                    padding: 20px;
+                    background-image: linear-gradient(to right, #7e7e7e, #909090, #a2a2a2, #b4b4b4, #c7c7c7, #c7c7c7, #c7c7c7, #c7c7c7, #b4b4b4, #a2a2a2, #909090, #7e7e7e);
+
+                    border-radius: 10px;
+                    width: 100%;
+                    
+                    fieldset {
+                        margin:10px;
+                        border: 1px solid black;
+                        border-radius: 5px;
+
+                        legend{
+                            padding: 0 6px;
+                            margin-left: 7px;
+
+                            h3 {
+                                font-size: 16px;
+                            }
+
+                        }
+
+                        form {
+                            padding: 20px;
+                            
+                            input, textarea{
+                                width: 100%;
+                                box-sizing: border-box;
+                                padding: 6px 8px;
+                                margin-bottom: 10px;
+                                border:1px solid #000;
+                                border-radius: 8px;
+                            }
+                            .botones {
+                                text-align: center;
+                                input {
+                                    background-color: transparent;
+                                    width: 35%;
+                                }
+                                input:hover{
+                                    
+                                    background-color: #1e1e1e;
+                                    color: white;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }    
+        }       
+
+        }
+
 
 
     /*Pie de pagina*/
     footer  {
         background-image: linear-gradient(to right, #7e7e7e, #909090, #a2a2a2, #b4b4b4, #c7c7c7, #c7c7c7, #c7c7c7, #c7c7c7, #b4b4b4, #a2a2a2, #909090, #7e7e7e);
+
+        position: relative;
+        bottom: 0;
 
         .container_foot {
             display: flex;
@@ -486,7 +635,7 @@
         
     }
 
-
+}
 
 
 

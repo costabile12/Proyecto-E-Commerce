@@ -54,49 +54,57 @@
     </header>
 
     <main>
+        <div class="contacto">   
 
-        <div>
-            <p>
-                Compra LOBISÓN ONLINE y recibí tu compra sin moverte de tu casa.
-                <br>
-                LOBISÓN, más de 20 tiendas en todo el país
-            </p>
-        </div>
-        
-        <!--Formulario de contacto-->
-        <fieldset>
-            <legend>
-                <h2>Formulario de contacto</h2>
-            </legend>
-
-            <form action="https://formspree.io/f/xwpkkbwe" method="post">
-                
-                <div>
-                    <label for="name">Nombre</label>
-                    <br>
-                    <input type="text" name="name" id="name" required pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?:[ '-][A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$
-                    ">
+            <h2>Contacto | Lobisón</h2>
+            <div class="container_contacto">
+                <div class="mensaje">
+                    <p>
+                        Compra LOBISÓN ONLINE y recibí tu compra sin moverte de tu casa.
+                    </p>
+                    <p>
+                        LOBISÓN, más de 20 tiendas en todo el país.
+                    </p>
                 </div>
                 
-                <div>
-                    <label for="email">Email</label>
-                    <br>
-                    <input type="email" name="email" id="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-                </div>
+                <!--Formulario de contacto-->
+                <div class="formulario">
+                    <fieldset>
+                        <legend>
+                            <h3>Formulario de contacto</h3>
+                        </legend>
 
-                <div>
-                    <label for="mensaje">Mensaje</label>
-                    <br>
-                    <textarea name="mensaje" id="mensaje" required rows="5" cols="25"></textarea>
-                </div>
+                        <form action="https://formspree.io/f/xwpkkbwe" method="post">
+                            
+                            <div>
+                                <label for="name">Nombre</label>
+                                <br>
+                                <input type="text" name="name" id="name" required pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?:[ '-][A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$
+                                ">
+                            </div>
+                            
+                            <div>
+                                <label for="email">Email</label>
+                                <br>
+                                <input type="email" name="email" id="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                            </div>
 
-                <div>
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Borrar">
-                </div>
+                            <div>
+                                <label for="mensaje">Mensaje</label>
+                                <br>
+                                <textarea name="mensaje" id="mensaje" required rows="5" cols="25"></textarea>
+                            </div>
 
-            </form>
-        </fieldset>
+                            <div class="botones">
+                                <input type="submit" value="Enviar">
+                                <input type="reset" value="Borrar">
+                            </div>
+
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+        </div> 
     </main>
     <footer>
         <div class="container_foot">
