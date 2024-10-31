@@ -26,6 +26,7 @@ body{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            overflow-x: hidden;
 
             /*Parte izquiera del header*/
             .container_left {
@@ -492,8 +493,85 @@ body{
                     }
                 }
             }    
-        }       
+        }
+        /*SUCURSALES*/      
+        .sucursales {
+            padding: 30px 0px;
 
+            h2{
+                margin:10px;
+                font-size: 32px;
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            .container_sucursales {
+                padding: 0 20px;
+            }
+        }
+        /*ENVIOS*/
+        .tipos_envios {
+            padding: 30px 20px;
+
+            h2 {
+                margin:10px;
+                font-size: 32px;
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            h3 {
+                margin-top: 10px;
+            }
+            p {
+                width: 100%;
+                padding: 20px;
+                border-bottom: 1px solid #1e1e1e;
+            }
+        }
+        .puntos_retiro {
+            padding: 10px 20px;
+
+            h3 {
+                margin-left: 10px;
+                margin-bottom: 20px;
+                font-size: 22px;
+                text-decoration:underline
+            }
+        }
+
+        /*Cambios y devoluciones*/
+        .container_cambios_devoluciones {
+            padding: 30px 20px;
+
+            h2 {
+                margin:10px;
+                font-size: 32px;
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            h3 {
+                margin:10px;
+                text-decoration: underline;
+            }
+            
+            p {
+                width: 100%;
+                padding:10px 20px;
+            }
+
+            ul {
+                padding: 10px 20px;
+
+
+                li {
+                    margin-bottom: 10px;
+                }
+
+            }
+
+        }
         }
 
 
