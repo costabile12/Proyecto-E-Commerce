@@ -3,14 +3,17 @@
 * {
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
     box-sizing: border-box;
     font-family: "Orbitron", serif;
-
+    
 }
 
-body{
 
+body{
+    width: 100vw;
+    height: auto;
+    background-color: #eaeaea;
+    overflow-x: hidden;
     /*Encabezado*/
     header {
         background-image: linear-gradient(to right, #7e7e7e, #909090, #a2a2a2, #b4b4b4, #c7c7c7, #c7c7c7, #c7c7c7, #c7c7c7, #b4b4b4, #a2a2a2, #909090, #7e7e7e);
@@ -19,14 +22,16 @@ body{
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 1000;
+        z-index: 1;
+        
 
 
         .container_header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            overflow-x: hidden;
+
+
 
             /*Parte izquiera del header*/
             .container_left {
@@ -138,10 +143,10 @@ body{
     /*Contenido*/
 
     main {
-        
         background-color: #eaeaea;
         font-weight: 100;
-        padding: 65px 0px;
+        position: relative;
+        top: 94px;
 
         
 
@@ -356,6 +361,7 @@ body{
         /*RESEÑAS*/
         .reseñas {
             padding: 30px 0;
+            
 
             h2 {
                 font-style: italic;
@@ -420,7 +426,7 @@ body{
         /*CONTACTO*/
         .contacto {
             padding: 30px 0px;
-
+            height: 560px;
             h2{
                 margin:10px;
                 font-size: 32px;
@@ -429,13 +435,14 @@ body{
             }
 
             .container_contacto {
-                display: grid;
-                grid-template-columns: 25% auto;
-                justify-content: space-evenly   ;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
 
                 .mensaje {
                     align-content: center;
                     padding: 10px;
+                    
                     
                     p {
                         font-size: 20px;
@@ -448,19 +455,25 @@ body{
                     background-image: linear-gradient(to right, #7e7e7e, #909090, #a2a2a2, #b4b4b4, #c7c7c7, #c7c7c7, #c7c7c7, #c7c7c7, #b4b4b4, #a2a2a2, #909090, #7e7e7e);
 
                     border-radius: 10px;
-                    width: 100%;
+                    width: auto;
+                    height: auto;
                     
                     fieldset {
                         margin:10px;
                         border: 1px solid black;
                         border-radius: 5px;
+                        height: 400px;
+                        max-width: 100%;
 
                         legend{
                             padding: 0 6px;
                             margin-left: 7px;
 
+
                             h3 {
-                                font-size: 16px;
+                                font-size: 18px;
+                                color: #1e1e1e;
+                                text-shadow:0 0 5px #fff;
                             }
 
                         }
@@ -468,11 +481,15 @@ body{
                         form {
                             padding: 20px;
                             
+                            label {
+                                font-size: 16px;
+                            }
+
                             input, textarea{
                                 width: 100%;
                                 box-sizing: border-box;
                                 padding: 6px 8px;
-                                margin-bottom: 10px;
+                                margin-bottom: 25px;
                                 border:1px solid #000;
                                 border-radius: 8px;
                             }
@@ -486,6 +503,7 @@ body{
                                     
                                     background-color: #1e1e1e;
                                     color: white;
+                                    border: 2px solid #fff;
                                     
                                 }
                             }
@@ -532,11 +550,20 @@ body{
         .puntos_retiro {
             padding: 10px 20px;
 
+
             h3 {
                 margin-left: 10px;
                 margin-bottom: 20px;
                 font-size: 22px;
                 text-decoration:underline
+            }
+
+            p {
+                margin: 20px 40px;
+
+                span {
+                    margin:20px 0px ;
+                }
             }
         }
 
@@ -562,7 +589,10 @@ body{
             }
 
             ul {
-                padding: 10px 20px;
+
+                padding: 20px;
+                margin-left: 40px;
+
 
 
                 li {
@@ -572,16 +602,64 @@ body{
             }
 
         }
+        /*MAYORISTAS*/
+        .container_mayoristas {
+            padding: 30px 20px;
+            height: 560px;
+
+            h2 {
+                position: relative;
+                margin:10px;
+                font-size: 32px;
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            h3 {
+                font-size: 22px; 
+                margin:20px;
+                text-decoration: underline;
+            }
+
+            ul {
+                font-size: 18px;
+                padding: 0 20px;
+                margin: 20px 0;
+
+                li {
+                    margin: 10px 0;
+                }
+            }
+            p {
+                font-size: 18px;
+                margin: 20px 0;
+            }
+            ul {
+                li {
+                    a{
+                        text-decoration: none;
+                        color: #000;
+                        font-weight: 700;
+                    }
+                    
+                }
+            }
+
+            
+        }
         }
 
 
 
     /*Pie de pagina*/
     footer  {
+        
+        max-height: 100%;
         background-image: linear-gradient(to right, #7e7e7e, #909090, #a2a2a2, #b4b4b4, #c7c7c7, #c7c7c7, #c7c7c7, #c7c7c7, #b4b4b4, #a2a2a2, #909090, #7e7e7e);
 
         position: relative;
-        bottom: 0;
+        bottom: -271px;
+        
 
         .container_foot {
             display: flex;
