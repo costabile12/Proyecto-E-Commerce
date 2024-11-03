@@ -14,6 +14,7 @@ body{
     height: auto;
     background-color: #eaeaea;
     overflow-x: hidden;
+
     /*Encabezado*/
     header {
         background-image: linear-gradient(to right, #7e7e7e, #909090, #a2a2a2, #b4b4b4, #c7c7c7, #c7c7c7, #c7c7c7, #c7c7c7, #b4b4b4, #a2a2a2, #909090, #7e7e7e);
@@ -106,15 +107,17 @@ body{
                         svg {
                             color: #1e1e1e;
                         }
+                        .menu_item {
+                            background-color: transparent;
+                            border: none;
+                            cursor: pointer;
+                            display: none;
+                        }
                         
                     }
 
                 }
             }
-
-
-
-
         }
 
         
@@ -417,7 +420,7 @@ body{
 
                             }   
                         }
-
+                        
             }
 
 
@@ -764,9 +767,17 @@ body{
                                 text-shadow: 0 0 5px #fff;
                             }
                         }
+
                     }
                 }
 
+            }
+
+            .whatsapp {
+                position: fixed;
+                right: 50px;
+                bottom: 40px;
+                z-index: 1;
             }
         }
 
@@ -792,6 +803,43 @@ body{
     }
 
 }
+
+@media only screen and (max-width:866px){
+    body {
+        header {
+            height: 94.33px;
+            .container_header .container_left  {
+                .nav_bar{
+                    display: none;
+                }
+                .box_logo{
+                    h1 {
+                        font-family: "Alfa Slab One", serif;
+                        font-size: 18px;
+                    }
+                }
+                
+            }
+
+            .container_header .container_right .nav_links li   {
+                .menu_item {
+                    display: block;
+                    svg {
+                        width: 25px;
+                    }
+                }
+                
+                svg {
+                    width: 25px;
+                }
+            }
+        }
+
+    }
+ 
+}
+
+
 
 
 
