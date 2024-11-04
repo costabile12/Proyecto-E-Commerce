@@ -46,7 +46,7 @@ body{
                     align-items: center;
                     padding: 10px;
                     cursor: default;
-        
+                    
                     h1{
                         font-family: "Alfa Slab One", serif;
                         text-transform: uppercase;
@@ -57,10 +57,10 @@ body{
                         padding: 0 10px;
                     }
                 
-        
+                    
                     .logo {
-                        width: 4rem;
-                        
+                        width: 4rem;            
+                        height: auto;  
                     }
                 }
                 /*Navegacion de header*/
@@ -75,9 +75,7 @@ body{
                         display: flex;
                         gap: 20px;
                         
-
                         li {
-
 
                             a {
                                 text-decoration:none;
@@ -90,7 +88,7 @@ body{
                         }
                     }
             }
-            /**/
+            /*Parte derecha del header*/
             .container_right {
                 display: flex;
                 justify-content: flex-end;
@@ -120,27 +118,6 @@ body{
             }
         }
 
-        
-
-        .logo {
-            max-width: 100%;
-            height: auto;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        a{
-            text-decoration: none;
-            color: #1e1e1e;
-            text-shadow: 0 0 7px #eaeaea;
-        }
-
-        .iconos {
-            color: #1e1e1e;
-            cursor: pointer;
-        }
     }
 
     /*Contenido*/
@@ -807,36 +784,71 @@ body{
 @media only screen and (max-width:866px){
     body {
         header {
-            height: 94.33px;
+            height: auto;
             .container_header .container_left  {
                 .nav_bar{
                     display: none;
                 }
                 .box_logo{
+
+                    padding: 5px;
                     h1 {
                         font-family: "Alfa Slab One", serif;
-                        font-size: 18px;
+                        font-size: 16px;
+                    }
+
+                    .logo {
+                        width: 2rem;
                     }
                 }
                 
             }
+            
+
 
             .container_header .container_right .nav_links li   {
                 .menu_item {
                     display: block;
                     svg {
-                        width: 25px;
+                        width: 16px;
                     }
                 }
                 
                 svg {
-                    width: 25px;
+                    width: 16px;
                 }
             }
         }
 
+        main {
+            position: relative;
+            top: 47px;
+
+            .banner .container_video_banner {
+                height: 25vh;
+            }
+
+        }
+
+
+        footer {
+            .container_foot .container_foot_left form{
+                .email {
+                    width: 70%;
+                }
+                .boton {
+                    width:20% ;
+                }
+            }
+            .box_logo {
+                img {
+                    max-width: 70%;
+                    max-height: 70%;
+                }
+            }
+        }
     }
- 
+
 }
 
 
