@@ -810,12 +810,12 @@ body{
                 .menu_item {
                     display: block;
                     svg {
-                        width: 16px;
+                        width: 18px;
                     }
                 }
                 
                 svg {
-                    width: 16px;
+                    width: 18px;
                 }
             }
         }
