@@ -176,7 +176,7 @@ body{
                 display: flex;
                 flex-wrap: wrap;
                 justify-content:flex-start;
-                padding: 20px;
+                padding: 0 0 0 15px;
                 align-items: stretch;
                 gap: 25px;
                 
@@ -246,7 +246,7 @@ body{
     }
         /*Productos*/
         .container_productos {
-            padding: 30px 0px;
+            padding: 0 15px;
             display: block;
             justify-content: flex-start;
             align-items: center;
@@ -340,7 +340,7 @@ body{
 
         /*RESEÑAS*/
         .reseñas {
-            padding: 30px 0;
+            padding: 0 15px;
             
 
             h2 {
@@ -405,7 +405,7 @@ body{
             }
         /*CONTACTO*/
         .contacto {
-            padding: 30px 0px;
+            padding: 0 15px;
             height: 560px;
             h2{
                 margin:10px;
@@ -494,7 +494,7 @@ body{
         }
         /*SUCURSALES*/      
         .sucursales {
-            padding: 30px 0px;
+            padding: 0 15px;
 
             h2{
                 margin:10px;
@@ -509,7 +509,7 @@ body{
         }
         /*ENVIOS*/
         .tipos_envios {
-            padding: 30px 20px;
+            padding: 0 15px;
 
             h2 {
                 margin:10px;
@@ -549,7 +549,7 @@ body{
 
         /*Cambios y devoluciones*/
         .container_cambios_devoluciones {
-            padding: 30px 20px;
+            padding: 0 15px;
 
             h2 {
                 margin:10px;
@@ -584,7 +584,7 @@ body{
         }
         /*MAYORISTAS*/
         .container_mayoristas {
-            padding: 30px 20px;
+            padding: 0 15px;
             height: 560px;
 
             h2 {
@@ -781,619 +781,301 @@ body{
     }
 
 }
-/*Celular pequeños tablet verticales y telefonos grandes*/
-@media only screen and (min-width: 600px) and  (max-width:992px){
-    body {
-        header {
-            height: auto;
-            .container_header .container_left  {
-                .nav_bar  {
-
-                    padding: 0 10px;
-
-                    .nav_links {
-                        gap:7px;
-                        
-                        li{
-                            a {
-                                font-size: 0.8rem;
-                            }   
-                        }
-                    }
-
-
-                }
-                .box_logo{
-
-                    padding: 5px;
-
-                    h1 {
-                        padding: 0 3px;
-                        font-size: 16px;
-                    }
-
-                    .logo {
-                        width: 2.5rem;
-                    }
-                }
-                
-            }
-            
-
-
-            .container_header .container_right .nav_links  {  
-                svg {
-                    width: 18px;
-                }
-            }
-        }
-
-        main {
-            position: relative;
-            top: 56px;
-
-            .banner .container_video_banner {
-                height: 60vh;
-            }
-            /*Index*/
-            .productos_destacados .container_destacados .producto_card {
-                width: 170px;
-                height:auto ;
-
-                .container_img  {
-                    height:250px;
-                    img {
-                        width: 100%;
-                        height: 100%;
-    
-                    }
-
-                }
-                .container_description {
-                    h3 {
-                        font-size: 12px;
-                    }
-                    h4 {
-                        font-size: 12px;
-                    }
-                    button {
-                        font-size: 10px;
-                    }
-                }
-
-            }
-            /*Productos*/
-            .container_productos{
-                .remeras, .pantalones, .musculosas, .camisas, .bermudas {
-                    .producto_card {
-                        width: 170px;
-                        height:auto ;
-
-                .container_img  {
-                    height:250px;
-                    img {
-                        max-width: 100%;
-                        height: 100%;
-    
-                    }
-
-                }
-                .container_description {
-                    h3 {
-                        font-size: 12px;
-                    }
-                    h4 {
-                        font-size: 12px;
-                    }
-                    button {
-                        font-size: 10px;
-                    }
-                }
-                    }
-                }
-            }
-            /*Reseñas*/
-            .reseñas .container_reseñas {
-
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                grid-template-rows: repeat(10, 1fr);
-
-                .sidebar {
-                    display: none;
-                }
-
-                .contenido_reseñas .card {
-                    p {
-                        span {
-                            font-size: 12px;
-                        }
-                    }
-                }
-            }
-
-            /*Contacto*/
-            .contacto{
-                
-                h2 {
-                    font-size: 20px;
-                }
-
-                .container_contacto {
-                    padding: 20px;
-
-                    .mensaje p {
-                        font-size: 16px;
-                    }
-
-                    .formulario {
-                        fieldset {
-                            height: auto;
-                            legend h3 {
-                                font-size: 18px;
-                            }
-                            form div {
-                                label {
-                                    font-size:16px;
-                                }
-
-                                input, textarea {
-                                    height: 25px;
-                                }
-                            }
-                            form .botones input {
-                                height: 30px;
-                            }
-                            
-                        }
-                        }
-                    }            
-
-            }            
-
-            /*Sucursales*/
-            .sucursales p {
-                font-size: 12px;
-            }
-
-            /*Envios*/
-            .tipos_envios, .puntos_retiro{
-                h2 {
-                    font-size: 20px;
-                }
-
-                h3 {
-                    font-size: 16px;
-                }
-                p {
-                    font-size: 12px;
-                }
-            }
-
-            /*Cambios y devoluciones*/
-            .container_cambios_devoluciones {
-                h2 {
-                    font-size: 20px;
-                }
-
-                p {
-                    font-size: 12px;
-                }
-
-                h3 {
-                    font-size: 16px;
-                }
-
-                ul {
-                    font-size: 12px;
-                }
-            }
-            /*Mayoristas*/
-            .container_mayoristas {
-                h2{ 
-                    font-size: 20px;
-                }
-                h3 {
-                    font-size: 16px;
-                }
-
-                ul {
-                    font-size:12px;
-                }
-
-                p {
-                    font-size: 12px;
-                }
-            }
-        }
-
-
-        footer {
-
-            bottom: -100px;
-            .container_foot .container_foot_left form{
-                .email {
-                    width: 70%;
-                }
-                .boton {
-                    width:20% ;
-                }
-            }
-            .box_logo {
-                img {
-                    max-width: 70%;
-                    max-height: 70%;
-                }
-            }
-        }
-    }
-
-}
 
 /*Celulares muy pequeños*/
 @media only screen and (max-width: 600px) {
-
-    body  {
+    body {
         header {
-            height: auto;
-            .container_header .container_left  {
-                .nav_bar{
-                    display: none;
-                }
-                .box_logo{
-
-                    padding: 5px;
-
-                    h1 {
-                        padding: 3px;
-                        font-size: 14px;
-                        
-                    }
-
-                    .logo {
-                        width: 2rem;
-                    }
-                }
-                
-            }
-            .container_header .container_right .nav_links {
-                
-                gap: 10px;
-
-                li   {
-                    .menu_item {
-                        display: block;
-                        svg {
-                            width: 18px;
+            .container_header {
+                .container_left {
+                    .box_logo {
+                        h1 {
+                            padding: 0 5px;
+                            font-size: 16px;
+                        }
+                        .logo{
+                            width: 43px;
+                            img {
+                                width: 100%;
+                            }
                         }
                     }
-                    
-                    svg {
-                        width: 18px;
+                    .nav_bar {
+                        display: none;
                     }
                 }
-            }
+
+                .container_right .nav_links {
+                    gap: 10px;
+                    li {
+                        svg {
+                            width: 25px;
+                        }
+                        .menu_item{ 
+                            display: block;
+                            svg {
+                                width: 25px;
+                            }
+                        }
+
+                    }
+                }
+                
+
+
+
+            } 
         }
 
         main {
             position: relative;
-            top: 48px;
+            top: 69px;
 
-            /*Index*/
+            /*Index baner*/
             .banner .container_video_banner {
-                height: 25vh;
+                height: 25%;
             }
+
+            /*Index destacados*/
             .productos_destacados {
-                            h2 {
-                                font-size: 20px;
+                h2 {
+                    font-size: 18px;
+                }
+
+                .container_destacados{
+                    gap: 10px;
+                    padding: 0;
+                    .producto_card {
+                        width: 187px;
+                        padding: 20px 10px;
+
+                        .container_img {
+                            width: 163px;
+                            height: 200px;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
                             }
-                            .container_destacados .producto_card {
-
-                                width: 45%;
-                                height:auto;
-                                padding: 20px 10px;
-                
-                                .container_img  {
-                                    width: 100%;
-                                    height:200px;
-                                    img {
-                                        max-width: 100%;
-                                        height: 100%;
-                    
-                                    }
-                
-                                }
-                                .container_description {
-                                    h3 {
-                                        font-size: 10px;
-                                    }
-                                    h4 {
-                                        font-size: 10px;
-                                    }
-                                    button {
-                                        font-size: 7px;
-                                    }
-                                }
                         }
+                        .container_description {
+                            h3 {
+                                font-size: 10px;
+                            }
+                            h4 {
+                                font-size: 12px;
+                            }
+                            button {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
             }
-
 
             /*Productos*/
             .container_productos{
+                padding: 0;
                 .title {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
                 h2 {
-                    font-size: 16px;
+                    font-size: 14px;
                 }
-                .remeras, .pantalones, .musculosas, .camisas, .bermudas {
 
+                .remeras, .pantalones, .camisas, .musculosas, .bermudas{
+                    gap: 10px;
 
                     .producto_card {
-                        width: 45%;
-                        height:auto ;
+                        width: 187px;
                         padding: 20px 10px;
 
-                .container_img  {
-                    width: 100%;
-                    height:200px;
-                    
-                    img {
-                        width: 100%;
-                        height: 100%;
-    
-                    }
+                        .container_img {
+                            width: 163px;
+                            height: 200px;
 
-                }
-                .container_description {
-                    h3 {
-                        font-size: 10px;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .container_description {
+                            h3 {
+                                font-size: 10px;
+                            }
+                            h4 {
+                                font-size: 12px;
+                            }
+                            button {
+                                font-size: 10px;
+                            }
+                        }
                     }
-                    h4 {
-                        font-size: 10px;
-                    }
-                    button {
-                        font-size: 7px;
-                    }
-                }
-                    }
-                }
+                }                    
+
+
+                
+
             }
 
             /*Reseñas*/
-            .reseñas{ 
+            .reseñas {
                 h2 {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
                 .container_reseñas {
 
-                    display: grid;
-                    grid-template-columns: repeat(1, 1fr);
-                    grid-template-rows: repeat(10, 1fr);
+                    grid-template-columns: repeat(1,1fr);
+                    gap: 0;
 
                     .sidebar {
                         display: none;
                     }
-
-                    .contenido_reseñas{
-                        .card {
-                            p {
-                                font-size: 12px;
-
-                                span {
-                                    font-size: 10px;
-                                }
+                    .contenido_reseñas {
+                        width: 100%;
+                        .card p {
+                            font-size: 12px;
+                            span {
+                                font-size: 10px;
                             }
                         }
                     }
                 }
-            }  
-            
-            /*Contacto*/
-            .contacto{
-                
-                h2 {
-                    font-size: 20px;
-                }
-
-                .container_contacto {
-                    padding: 20px;
-
-                    .mensaje p {
-                        font-size: 12px;
-                    }
-
-                    .formulario {
-                        fieldset {
-                            height: 285px;
-                            legend h3 {
-                                font-size: 14px;
-                            }
-                            form div {
-                                label {
-                                    font-size: 12px;
-                                }
-
-                                input, textarea {
-                                    height: 20px;
-                                }
-                            }
-                            form .botones input {
-                                height: 30px;
-                            }
-                            
-                        }
-                        }
-                    }            
 
             }
 
-            /*Sucursales*/
-            .sucursales{
+            /*Contacto*/
+            .contacto {
                 h2 {
                     font-size: 18px;
                 }
-                p {
-                    font-size: 12px;
-                }
+                .container_contacto{
+                    .mensaje p{
+                        font-size: 12px;
+                    }
+                    .formulario {
+                        padding: 5px;
+                        fieldset {
+                            legend h3 {
+                                font-size: 14px;
+                            }
+                            form  {
+                                div{
+                                    label {
+                                        font-size: 14px;
+                                    }
 
-            } 
+                                    input, textarea {
+                                        padding: 3px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            /*Sucursales*/
+            .sucursales {
+                h2 {
+                    font-size: 18px;
+                }
+                .container_sucursales p{
+                    font-size: 12px;
+
+                }
+            }
 
             /*Envios*/
-            .tipos_envios, .puntos_retiro{
+            .tipos_envios {
                 h2 {
-                    font-size: 14px;
+                    font-size: 18px;
                 }
-
                 h3 {
-                    font-size: 12px;
+                    font-size: 16px;
                 }
                 p {
-                    font-size: 8px;
+                    font-size: 12px;
+                }
+            }
+            .puntos_retiro {
+                h3 {
+                    font-size: 16px;
+                }
+                p {
+                    font-size: 12px;
                 }
             }
 
-            /*Cambios y devoluciones*/
+            /*Cambios y  Devoluciones*/
             .container_cambios_devoluciones {
                 h2 {
-                    font-size: 14px;
-                }
-
-                p {
-                    font-size: 8px;
-                }
-
-                h3 {
-                    font-size: 12px;
-                }
-
-                ul {
-                    font-size: 8px;
-                }            
-
-            }
-            /*Mayoristas*/
-            .container_mayoristas {
-                h2{ 
-                    font-size: 14px;
+                    font-size: 18px;
                 }
                 h3 {
+                    font-size: 16px;
+                }
+                p{
                     font-size: 12px;
                 }
-
                 ul {
-                    font-size:8px;
-                }
-
-                p {
-                    font-size: 8px;
+                    font-size: 12px;
                 }
             }
 
-        }    
+            /*Mayoristas*/ 
+            .container_mayoristas{
+                h2 {
+                    font-size: 18px;
+                }
+                h3 {
+                    font-size: 16px;
+                }
+                p {
+                    font-size: 12px;
+                }
+                ul {
+                    font-size: 12px;
+                    margin: 0 0 0 10px;
+                }
+            }
+        }
+
         footer {
 
             bottom: -100px;
-            .container_foot .container_foot_left {
-                
-                h4 {
-                    font-size:0.7rem;
-                }
-
-                form{
-                    .email {
-                        width: 70%;
+            .container_foot {
+                .container_foot_left {
+                    h4 {
+                        font-size: 14px;
                     }
-                    .boton {
-                        font-size: 10px;
-                        width:20% ;
-                        height: 100%;
+                    form {
+                        .email {
+                            width: 69%;
+                        }
+                        .boton {
+                            width: 25%;
+                        }
+
                     }
                 }
-            }
-            .container_foot .container_foot_mid .nav_foot_mid .nav_foot_mid_links {
-                font-size: 10px;
-
-            }
-            .container_foot .container_foot_right .nav_foot_right .nav_foot_right_links{
-                font-size: 10px;
+                .container_foot_mid , .container_foot_right {
+                    font-size: 12px;
+                }
+                .whatsapp {
+                    right: 30px;
+                }
             }
             .box_logo {
-                img {
-                    max-width: 50%;
-                    max-height: 50%;
-                }
-            }
-
-            .container_foot .whatsapp {
-                right: 20px;;
+                width: 4.5rem;
             }
             h6 {
-                font-size: 7px;
+                font-size: 0.5rem;
             }
         }
     }
-
-
 }
 
-/*Tablet horizontales -> dispositivos medianos*/
-@media only screen  and (min-width:993px) and (max-width:1200px) {
-
-    body {
-            header {
-                height: auto;
-                .container_header .container_left  {
-                    .nav_bar  {
     
-                        padding: 0 10px;
-    
-                        .nav_links {
-                            gap:10px;
-                            
-                            li{
-                                a {
-                                    font-size: 1.1rem;
-                                }   
-                            }
-                        }
-    
-    
-                    }
-                    .box_logo{
-    
-                        padding: 5px;
-    
-                        h1 {
-                            padding: 0 7px;
-                            font-size: 20px;
-                        }
-    
-                        .logo {
-                            width: 3rem;
-                        }
-                    }
-                    
-                }
-                
-    
-                .container_header .container_right .nav_links  {  
-                    svg {
-                        width: 24px;
-                    }
-                }
-            }
-        
-        main {
-            
-        }
-        footer{
-
-        }
-    }
-
-    }
-
-
 
 /*¨/
