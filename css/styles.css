@@ -1132,11 +1132,14 @@ body{
                     .producto_card {
                         width: 45%;
                         height:auto ;
+                        padding: 20px 10px;
 
                 .container_img  {
-                    height:170px;
+                    width: 100%;
+                    height:200px;
+                    
                     img {
-                        max-width: 100%;
+                        width: 100%;
                         height: 100%;
     
                     }
@@ -1144,13 +1147,13 @@ body{
                 }
                 .container_description {
                     h3 {
-                        font-size: 7px;
+                        font-size: 10px;
                     }
                     h4 {
-                        font-size: 7px;
+                        font-size: 10px;
                     }
                     button {
-                        font-size: 5px;
+                        font-size: 7px;
                     }
                 }
                     }
