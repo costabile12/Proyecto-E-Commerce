@@ -53,8 +53,8 @@ body{
                         text-shadow: 0 0 5px #fff;
                         max-width: 100%;
                         height: auto;
-                        font-size: 1.5rem;
-                        padding: 0 10px;
+                        font-size: 1.7rem;
+                        padding: 0 7px;
                     }
                 
                     
@@ -101,7 +101,11 @@ body{
                     gap: 20px;
 
                     li {
-                        
+                        button {
+                            background-color: transparent;
+                            border: none;
+                            cursor: pointer;
+                        }
                         svg {
                             color: #1e1e1e;
                         }
@@ -262,9 +266,10 @@ body{
             }
 
             h2 {
+                margin: 16px 0 5px 20px;
                 font-size: 24px;
                 font-style: normal;
-                
+
             }
 
             .remeras, .pantalones, .camisas, .musculosa, .bermudas {
@@ -785,7 +790,7 @@ body{
 }
 
 /*Celulares medianos y grandes*/
-@media only screen and (max-width: 600px) and (min-width:363px) {
+@media only screen and (max-width: 600px)  {
     body {
         header {
             .container_header {
@@ -858,7 +863,7 @@ body{
                         .container_description {
                             padding: 0;
                             h3 {
-                                font-size: 12px;
+                                font-size: 11px;
                             }
 
                             .precio {
@@ -883,6 +888,7 @@ body{
                     font-size: 18px;
                 }
                 h2 {
+                    margin: 8px 0px 5px 20px;
                     font-size: 14px;
                 }
 
@@ -900,7 +906,7 @@ body{
                         .container_description {
                             padding: 0;
                             h3 {
-                                font-size: 12px;
+                                font-size: 11px;
                             }
 
                             .precio {
@@ -913,11 +919,7 @@ body{
                             }
                         }
                     }
-                }                    
-
-
-                
-
+                }                   
             }
 
             /*Reseñas*/
@@ -989,7 +991,7 @@ body{
             }
 
             /*Envios*/
-            .tipos_envios {
+            .tipos_envios , .puntos_retiro{
                 h2 {
                     font-size: 18px;
                 }
@@ -997,14 +999,7 @@ body{
                     font-size: 16px;
                 }
                 p {
-                    font-size: 12px;
-                }
-            }
-            .puntos_retiro {
-                h3 {
-                    font-size: 16px;
-                }
-                p {
+                    padding: 10px;
                     font-size: 12px;
                 }
             }
@@ -1047,7 +1042,10 @@ body{
 
             bottom: -100px;
             .container_foot {
+                flex-direction: column;
+
                 .container_foot_left {
+                    width: 100%;
                     h4 {
                         font-size: 14px;
                     }
@@ -1062,6 +1060,7 @@ body{
                     }
                 }
                 .container_foot_mid , .container_foot_right {
+                    width: 100%;
                     font-size: 12px;
                 }
                 .whatsapp {
@@ -1074,6 +1073,825 @@ body{
             h6 {
                 font-size: 0.5rem;
             }
+        }
+    }
+}
+/*Tablet y Celulares horizontales*/
+@media only screen and (min-width:600px) and (max-width:767px) {
+    body {
+        header {
+            .container_header {
+                .container_left {
+                    .box_logo {
+                        h1 {
+                            padding: 0 5px;
+                            font-size: 20px;
+                        }
+                        .logo{
+                            width: 53px;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .nav_bar .nav_links {
+                        gap:5px;
+
+                        li a {
+                            font-size: 14px;
+                        }
+                        
+                        
+                    }
+                }
+
+                .container_right .nav_links {
+                    gap: 10px;
+                    li {
+                        svg {
+                            width: 25px;
+                        }
+         
+                    }
+                }
+                
+
+
+
+            } 
+        }
+
+        main {
+            top: 82px;
+            /*Index baner*/
+            .banner .container_video_banner {
+                height: 30vh;
+            }
+            /*Index Destacados*/
+            .productos_destacados {
+                h2 {
+                    font-size: 20px;
+                }
+
+                .container_destacados{
+                    gap: 5px;
+                    padding: 5px;
+                    .producto_card{
+                        max-width: 180px;
+                        margin: 5px;
+
+                        img {
+                            width: 100%;
+                            height: 270px;
+                        }
+                        .container_description {
+                            padding: 0;
+                            h3 {
+                                font-size: 12px;
+                            }
+
+                            .precio {
+                                font-size: 14px;
+                            }
+
+                            button {
+                                padding: 5px;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                } 
+                
+
+            }
+
+            /*Productos*/
+            .container_productos{
+                padding: 0;
+                .title {
+                    font-size: 20px;
+                }
+                h2 {
+                    margin: 8px 0 5px 20px;
+                    font-size: 16px;
+                }
+
+                .remeras, .pantalones, .camisas, .musculosa, .bermudas{
+                    gap: 5px;
+                    padding: 5px;
+                    .producto_card{
+                        max-width: 180px;
+                        margin: 5px;
+
+                        img {
+                            width: 100%;
+                            height: 270px;
+                        }
+                        .container_description {
+                            padding: 0;
+                            h3 {
+                                font-size: 12px;
+                            }
+
+                            .precio {
+                                font-size: 14px;
+                            }
+
+                            button {
+                                padding: 5px;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }        
+
+            }
+
+            /*Reseñas*/
+            .reseñas {
+                h2 {
+                    font-size: 20px;
+                }
+                .container_reseñas {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .sidebar  {
+                        margin:auto;
+                        border: none;
+
+                        h3 {
+                            font-size: 18px
+                        }                        
+                    }
+
+                    .contenido_reseñas .card {
+                        p {
+                            font-size: 15px;
+                        }
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            /*Contacto*/
+            .contacto {
+                h2 {
+                    font-size: 20px;
+                }
+                .container_contacto .mensaje p{
+                    font-size: 16px;
+                }
+            }
+
+            /*Sucursales*/
+            .sucursales {
+                h2 {
+                    font-size: 20px;
+                }
+                .container_sucursales p {
+                    font-size: 14px;
+                }
+            }
+
+            /*Envios*/
+            .tipos_envios ,.puntos_retiro {
+                h2 {
+                    font-size: 20px;
+                }
+                h3 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+            }
+
+            
+
+            /*Cambios y Devoluciones*/
+            .container_cambios_devoluciones {
+                h2 {
+                    font-size: 20px;
+                }
+
+                p, ul {
+                    font-size: 15px;
+                }
+
+                h3 {
+                    font-size: 18px;
+                }
+
+            }
+
+            /*Mayoristas*/
+            .container_mayoristas {
+                h2 {
+                    font-size: 20px;
+                }
+                h3 {
+                    font-size: 18px;
+                }
+
+                ul, p {
+                    font-size: 15px;
+                }
+                ul {
+                    padding: 0 0 0 50px;
+                }
+            }
+        }
+
+        footer {
+            bottom: -150px;
+            .container_foot {
+                flex-direction: column;
+                .container_foot_left {
+                    width: 100%;
+                    h4 {
+                        font-size: 14px;
+                    }
+                    form {
+                        
+                        .email {
+                            width: 72%;
+                        }
+                        .boton {
+                            width: 20%;
+                        }
+
+                    }
+                }
+                .container_foot_mid , .container_foot_right {
+                    width: 100%;
+                    font-size: 14px;
+                }
+                .whatsapp {
+                    right: 30px;
+                }
+            }
+            .box_logo {
+                width: 4.8rem;
+            }
+            h6 {
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+/*laptops pequeñas o tablets horizontales*/
+@media only screen and (min-width:768px) and (max-width:991px) {
+    body {
+        header {
+            .container_header {
+                .container_left {
+                    .box_logo {
+                        h1 {
+                            padding: 0 5px;
+                            font-size: 22px;
+                        }
+                        .logo{
+                            width: 58px;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .nav_bar .nav_links {
+                        gap:10px;
+
+                        li a {
+                            font-size: 16px;
+                        }
+                        
+                        
+                    }
+                }
+
+                .container_right .nav_links {
+                    gap: 15px;
+                    li {
+                        svg {
+                            width: 30px;
+                        }
+
+                    }
+                }
+                
+            } 
+        }
+        main{
+            top: 87px;
+            /*Index baner*/
+            .banner .container_video_banner {
+                height: 40vh;
+            }
+
+            /*Index Destacados*/
+            .productos_destacados {
+                h2 {
+                    font-size: 24px;
+                }
+
+                .container_destacados{
+                    gap: 5px;
+                    padding: 5px;
+
+                    .producto_card {
+                        max-width: 223px;
+                        height: auto;
+                        margin: 10px; 
+                        img {
+                            width: 100%;
+                            height: 370px;
+                        }
+                        .container_description {
+                            padding: 0;
+                            h3 {
+                                font-size: 14px;
+                            }
+
+                            .precio {
+                                font-size: 16px;
+                            }
+
+                            button {
+                                padding: 5px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                } 
+                
+
+            }
+
+            /*Productos*/
+            .container_productos{
+                            padding: 0;
+                            .title {
+                                font-size: 24px;
+                            }
+                            h2 {
+                                margin: 10px 0 7px 20px;
+                                font-size: 20px;
+                            }
+            
+                            .remeras, .pantalones, .camisas, .musculosa, .bermudas{
+                                gap: 5px;
+                                padding: 5px;
+                                .producto_card{
+                                    max-width: 223px;
+                                    margin: 10spx;
+            
+                                    img {
+                                        width: 100%;
+                                        height: 370px;
+                                    }
+                                    .container_description {
+                                        padding: 0;
+                                        h3 {
+                                            font-size: 14px;
+                                        }
+            
+                                        .precio {
+                                            font-size: 16px;
+                                        }
+            
+                                        button {
+                                            padding: 5px;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }        
+            
+            }
+
+            /*Reseñas*/
+            .reseñas {
+                h2 {
+                    font-size: 24px;
+                }
+                .container_reseñas {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .sidebar  {
+                        border: none;
+                        margin: auto;
+                        h3 {
+                            font-size: 22px;
+                            
+                        }                        
+                    }
+
+                    .contenido_reseñas .card {
+                        p {
+                            font-size: 16px;
+                        }
+                        span {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }  
+            
+            /*Contacto*/
+            .contacto {
+                h2 {
+                    font-size: 24px;
+                }
+                .container_contacto{
+                    gap: 30px;
+
+                    .mensaje p{
+                        font-size: 18px;
+                    }
+                }
+                
+            }
+
+            /*Sucursales*/
+            .sucursales{    
+                h2 {
+                    font-size: 24px;
+                }
+
+                .container_sucursales p{
+                    font-size: 16px;
+                }
+            }
+
+            /*Envios*/
+            .tipos_envios , .puntos_retiro{
+                h2 {
+                    font-size: 24px;
+                }
+                h3 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            /*Cambios y devoluciones*/
+            .container_cambios_devoluciones{
+                h2 {
+                    font-size: 24px;
+                }
+                h3 {
+                    font-size: 20px;
+                }
+            }
+
+            /*Mayoristas*/
+            .container_mayoristas { 
+                h2 {
+                    font-size: 24px;
+                }
+                h3 {
+                    font-size: 20px;
+                }
+                p , ul {
+                    font-size: 16px;
+                }
+
+                ul {
+                    padding: 0 0 0 50px;
+                }
+            }
+
+            
+        }
+
+        footer {
+            bottom: -200px;
+            .container_foot {
+                flex-direction: column;
+                .container_foot_left {
+                    width: 100%;
+                    h4 {
+                        font-size: 16px;
+                    }
+                    form {
+                        text-align: center;
+                        .email {
+                            width: 70%;
+                        }
+                        .boton {
+                            width: 15%;
+                        }
+
+                    }
+                }
+                .container_foot_mid , .container_foot_right {
+                    width: 100%;
+                    font-size: 16px;
+                }
+                .whatsapp {
+                    right: 40px;
+                }
+            }
+            .box_logo {
+                width: 6rem;
+            }
+            h6 {
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+/*Laptos grandes y Pc escritorio*/
+@media only screen and (min-width:992px) and (max-width:1200px) {
+    body {
+        header{
+            .container_header {
+                .container_left {
+                    .box_logo {
+                        h1 {
+                            padding: 0 5px;
+                            font-size: 28px;
+                        }
+                        .logo{
+                            width: 64px;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .nav_bar .nav_links {
+                        gap:14px;
+
+                        li a {
+                            font-size: 20px;
+                        }
+                        
+                        
+                    }
+                }
+
+                .container_right .nav_links {
+                    gap: 17px;
+                    li {
+                        svg {
+                            width: 36px;
+                        }
+
+                    }
+                }
+            }
+        }
+        main{
+            /*Index Destacados*/
+            .productos_destacados {
+                padding: 30px;
+                h2 {
+                    font-size: 28px;
+                }
+
+                .container_destacados{
+                    gap: 5px;
+                    padding: 5px;
+
+                    .producto_card {
+                        max-width: 248px;
+                        height: auto;
+                        margin: 10px; 
+                        img {
+                            width: 100%;
+                            height: 400px;
+                        }
+                        .container_description {
+                            padding: 0;
+                            h3 {
+                                font-size: 16px;
+                            }
+
+                            .precio {
+                                font-size: 18px;
+                            }
+
+                            button {
+                                padding: 5px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                } 
+                
+
+            }
+            /*Productos*/
+            .container_productos{
+                padding: 5px;
+                .title {
+                    font-size: 28px;
+                }
+                h2 {
+                    margin: 10px 0 0px 20px;
+                    font-size: 24px;
+                    margin-left: 20px;
+                    margin-top: 20px;
+                }
+
+                .remeras, .pantalones, .camisas, .musculosa, .bermudas{
+                    gap: 5px;
+                    padding: 30px;
+
+                    .producto_card {
+                        max-width: 248px;
+                        height: auto;
+                        margin: 10px; 
+                        img {
+                            width: 100%;
+                            height: 400px;
+                        }
+                        .container_description {
+                            padding: 0;
+                            h3 {
+                                font-size: 16px;
+                            }
+
+                            .precio {
+                                font-size: 18px;
+                            }
+
+                            button {
+                                padding: 5px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }        
+
+            }
+            
+            /*Reseñas*/
+            .reseñas {
+                h2 {
+                    font-size: 28px;
+                }
+                .container_reseñas {
+                    display: flex;
+                    flex-wrap: wrap;
+
+
+                    .sidebar  {
+                        border: none;
+                        margin: auto;
+                        h3 {
+                            font-size: 24px;
+                            
+                        }                        
+                    }
+
+                    .contenido_reseñas .card {
+
+                        height: 130px;
+
+                        p {
+                            font-size: 16px;
+                        }
+                        span {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+
+            /*Contacto*/
+            .contacto {
+                h2 {
+                    font-size: 28px;
+                }
+                .container_contacto{
+                    gap: 30px;
+
+                    .mensaje p{
+                        font-size: 22px;
+                    }
+                    .formulario {
+                        width: 40%;
+                        padding: 10px;
+                        fieldset {
+                            legend h3 {
+                                font-size: 18px;
+                            }
+                            form  {
+                                width: 100%;
+                                div{
+                                    label {
+                                        font-size: 18px;
+                                    }
+
+                                    input, textarea {
+                                        padding: 4px 0;
+                                    }   
+                                }
+                                .botones input{
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }   
+                }
+                
+            }
+            
+            /*Sucursales*/
+            .sucursales{    
+                h2 {
+                    font-size: 28px;
+                }
+            }
+
+            /*Envios*/
+            .tipos_envios , .puntos_retiro{
+                h2 {
+                    font-size: 28px;
+                }
+                h3 {
+                    font-size: 22px;
+                }
+
+            }
+
+            /*Cambios y devoluciones*/
+            .container_cambios_devoluciones{
+                h2 {
+                    font-size: 28px;
+                }
+                h3 {
+                    font-size: 22px;
+                }
+            }
+            /*Mayoristas*/
+            .container_mayoristas { 
+                h2 {
+                    font-size: 28px;
+                }
+                h3 {
+                    font-size: 22px;
+                }
+                ul {
+                    padding: 0 0 0 50px;
+                }
+            }
+            
+        }
+
+        footer{ 
+            
+            bottom: -200px;
+            .container_foot {
+                flex-direction: column;
+                .container_foot_left {
+                    width: 100%;
+                    h4 {
+                        text-align: left;
+                        font-size: 16px;
+                    }
+                    form {
+                        text-align: left;
+                        .email {
+                            width: 45%;
+                        }
+                        .boton {
+                            font-size: 14px;
+                            width: 10%;
+                        }
+                    }
+                    .redes_sociales {
+                        justify-content: flex-start;
+                        .redes_sociales_links {
+                            justify-content: center;
+                            gap:50px
+                        }
+                    }
+                }
+                .container_foot_mid , .container_foot_right {
+                    width: 100%;
+                    font-size: 16px;
+                }
+                .whatsapp {
+                    right: 40px;
+                }
+            }
+            .box_logo {
+                width: 6rem;
+            }
+            h6 {
+                font-size: 0.8rem;
+            }
+
+
         }
     }
 }
