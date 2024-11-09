@@ -40,14 +40,16 @@ body{
                 justify-content: flex-start;
                 align-items: center;
 
-                /*Logo*/
+                /*Logo*/     
                 .box_logo {
+                    
                     display: flex;
                     align-items: center;
                     padding: 10px;
                     cursor: default;
                     
                     h1{
+                        text-decoration:none;
                         font-family: "Alfa Slab One", serif;
                         text-transform: uppercase;
                         text-shadow: 0 0 5px #fff;
@@ -153,7 +155,7 @@ body{
 
             .container_video_banner {
                 width: 100vw;
-                height: 50vh;
+
 
                 video {
                     width: 100%;
@@ -838,10 +840,7 @@ body{
             position: relative;
             top: 69px;
 
-            /*Index baner*/
-            .banner .container_video_banner {
-                height: 25%;
-            }
+
 
             /*Index destacados*/
             .productos_destacados {
@@ -1123,10 +1122,7 @@ body{
 
         main {
             top: 82px;
-            /*Index baner*/
-            .banner .container_video_banner {
-                height: 30vh;
-            }
+
             /*Index Destacados*/
             .productos_destacados {
                 h2 {
@@ -1386,10 +1382,7 @@ body{
         }
         main{
             top: 87px;
-            /*Index baner*/
-            .banner .container_video_banner {
-                height: 40vh;
-            }
+
 
             /*Index Destacados*/
             .productos_destacados {
@@ -1407,7 +1400,7 @@ body{
                         margin: 10px; 
                         img {
                             width: 100%;
-                            height: 370px;
+                            height: 330px;
                         }
                         .container_description {
                             padding: 0;
@@ -1450,7 +1443,7 @@ body{
             
                                     img {
                                         width: 100%;
-                                        height: 370px;
+                                        height: 330px;
                                     }
                                     .container_description {
                                         padding: 0;
@@ -1896,5 +1889,52 @@ body{
     }
 }
 
+@media only screen and (min-width:1201px) and (max-width:1563px) {
+    body {
+        footer {
+            bottom: -200px;
+            .container_foot {
+                flex-direction: column;
+                .container_foot_left {
+                    width: 100%;
+                    h4 {
+                        text-align: left;
+                        font-size: 16px;
+                    }
+                    form {
+                        text-align: left;
+                        .email {
+                            width: 45%;
+                        }
+                        .boton {
+                            font-size: 14px;
+                            width: 10%;
+                        }
+                    }
+                    .redes_sociales {
+                        justify-content: flex-start;
+                        .redes_sociales_links {
+                            justify-content: center;
+                            gap:50px
+                        }
+                    }
+                }
+                .container_foot_mid , .container_foot_right {
+                    width: 100%;
+                    font-size: 16px;
+                }
+                .whatsapp {
+                    right: 40px;
+                }
+            }
+            .box_logo {
+                width: 6rem;
+            }
+            h6 {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
 
     
