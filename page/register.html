@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Venta de ropa masculina">
     <meta name="author" content="Franco Costabile">
-    <title>Cambios y devoluciones</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="container_header">
-
             <div class="container_left">
             <!--Logo-->
                 <div class="box_logo">
@@ -60,64 +59,40 @@
     </header>
 
     <main>
-        <section class="container_cambios_devoluciones">
-            <h2>Cambios y devoluciones | Lobisón</h2>
-            <p>
-                En LOBISÓN queremos que puedas disfrutar plenamente de tus productos. Te ofrecemos un proceso rápido, ágil y sencillo para que puedas cambiar o devolver tu producto.
-            </p>
-            <h3>¿Cómo realizo un cambio o devolución?</h3>
-            <p>
-                Deberas ponerte en contacto por whatsapp al 116376-6644 y te explicaremos el paso a paso para realizar el cambio o devolución. Una vez que recibamos tus productos, en 48 hs. procesaremos la orden y procederemos a enviarte tu nuevo producto o efectuarte el reembolso correspondiente.
-            </p>
-            <p>
-                Estan habilitados los cambios en las sucursales RECOLETA, VILLA LURO, MORÓN Y SAN JUSTO. (Condición: llevar la orden de compra para mostrarla en el local)
-            </p>
+        <section class="registro">
+            <h2>Registro</h2>
+            <p>Comprá más rápido y ¡en un solo lugar!</p>
+            <div class="container_form">
+                <form action="" method="post">
+                    <div class="datos">
+                        <label for="name_lastname">Nombre y Apellido</label>
+                        <input type="text" placeholder="EJ: John/Jane Doe" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" id="name_lastname" name="nameuser_register" required>
+                    </div>
+                    <div class="datos">
+                        <label for="phone">Telefono (opcional)</label>
+                        <input type="tel" placeholder="xxx-xxxx-xxxx" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" id="phone" name="phone_register">
+                    </div>
+                    <div class="datos">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="usuario@email.com" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required id="email" name="email_register">
+                    </div>
+                    <div class="datos">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password_register" id="password" minlength="8" maxlength="12" required placeholder="8 - 12 caracteres">
+                    </div>
+                    <div class="datos">
+                        <label for="verification_password">Confirmar Contraseña</label>
+                        <input type="password" name="verification_password_register" id="verification_password" minlength="8" maxlength="12" required placeholder="8 - 12 caracteres">
+                    </div>
 
-            <h3>¿Qué tengo que tener en cuenta?</h3>
-
-            <ul>
-                <li>Tenés 30 días corridos desde que realizaste la compra para cambios y 10 días para devoluciones</li>
-                <li>Los productos deben estar en perfecto estado y con todas las etiquetas originales.</li>
-                <li>Podrás cambiarlo por cualquier otro producto de igual valor o varios productos que sumen el monto del mismo. En caso de que superen al valor del comprado, la diferencia será abonada través de un link de pago o transferencia.</li>
-                <li>No se permite cambiar el producto por el mismo modelo y mismo talle, salvo que se deba a una falla en el producto.</li>
-                <li>No aceptamos devoluciones de ropa interior (Medias, boxers, etc) por motivos de higiene.</li>
-            </ul>
-
-
-            <h3>Costos de Envío</h3>
-            <p>
-                Los costos de envío asociados con cambios y devoluciones son responsabilidad del cliente, excepto en casos donde el producto recibido sea defectuoso o incorrecto. En tales casos, cubriremos los costos de envío.
-            </p>
-            <p>   
-                Te sugerimos chequear bien las características de los mismos antes de realizar tu compra.
-            </p>
-            <p>    
-                Además, los cambios están sujetos a disponibilidad del stock del producto solicitado. Una vez que lleguen los productos a cambiar, verificaremos su estado y te cotizaremos el reenvío.
-            </p> 
-            <h3>Valor de la prenda ¿Qué sucede si esta cambia de precio?</h3>
-
-            <p>
-                <strong>Los precios pueden modificarse sin previo aviso.</strong>
-                <br>
-                <br>
-                <strong>Existen fechas especiales como Hot Days, Summer Sale, Winter Sale, Cyber Days, que esto sucede a menudo.</strong>
-                <br>
-                <br> 
-                <strong>En caso de que hayamos cambiado el precio del producto y estar dentro del plazo de 30 días, se considerará el precio a la fecha de compra que figura tu orden. (LO QUE EL CLIENTE PAGÓ - NO EL ACTUAL)</strong>
-                <br>
-            </p>
-
-            <h3>Arrepentimiento</h3>
-            <p>
-                Plazo: 10 Días a partir de la recepción del pedido.
-            </p>
-            <p>
-                El reintegro será realizado, luego de ser aprobado, mediante el mismo medio de pago elegido por el cliente al momento de la compra. Habiendo autorizado el reintegro solicitado, todo reclamo vinculado a la devolución del importe abonado deberá ser gestionado directamente ante el medio de pago empleado.
-
-            </p>
+                    <div class="botones">
+                        <input type="submit" value="Registrarse">
+                        <input type="reset" value="Borrar">
+                    </div>
+                </div>
+                </form>
 
         </section>
-        
     </main>
 
     <footer>
@@ -130,10 +105,10 @@
                     <input type="email" name="email_subscripto" class="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Email">
                     <input type="button" value="Enviar" class="boton">
                 </form>
-
+    
                 <div class="redes_sociales">
                     <ul class="redes_sociales_links">
-
+    
                         <li>
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 1024 1024"><path fill="currentColor" fill-rule="evenodd" d="M530.014 112.667c43.666-.667 86.997-.334 130.328-.667c2.667 51 21 102.999 58.33 138.998c37.332 37 89.997 54 141.328 59.666v134.332c-47.998-1.667-96.33-11.667-139.994-32.333c-19-8.667-36.665-19.667-53.998-31c-.333 97.332.334 194.665-.666 291.663c-2.667 46.666-18 93-44.998 131.332c-43.665 64-119.328 105.665-196.992 106.999c-47.664 2.666-95.329-10.334-135.994-34.333c-67.33-39.666-114.662-112.332-121.661-190.331c-.667-16.667-1-33.333-.334-49.666c6-63.333 37.332-123.999 85.997-165.332c55.33-47.999 132.66-70.999 204.99-57.332c.667 49.333-1.332 98.665-1.332 147.998c-33-10.667-71.664-7.667-100.663 12.333c-20.999 13.667-36.998 34.666-45.331 58.333c-7 17-5 35.666-4.667 53.666c8 54.666 60.664 100.665 116.662 95.665c37.332-.333 72.997-22 92.33-53.666c6.332-11 13.332-22.333 13.665-35.333c3.334-59.666 2-118.998 2.334-178.664c.333-134.332-.334-268.33.666-402.328"/></svg>
@@ -151,12 +126,11 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131c.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
                             </a>
                         </li>
-                            
                     </ul>
                 </div>
-
+    
             </section>
-
+    
             <section class="container_foot_mid">
                 <div class="nav_foot_mid">
                     <ul class="nav_foot_mid_links">
@@ -166,21 +140,20 @@
                     </ul>
                 </div>
             </section>
-
+    
             <section class="container_foot_right">
                 <div class="nav_foot_right">
                     <ul class="nav_foot_right_links">
                         <li><a href="./envios.html">Envios</a></li>
-                        <li><a href="#">Cambios y devoluciones</a></li>
+                        <li><a href="./cambios_devoluciones.html">Cambios y devoluciones</a></li>
                         <li><a href="./mayoristas.html">Mayoristas</a></li>
                     </ul>
                 </div>
             </section>
-
             <section class="whatsapp">
                 <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32.25" viewBox="0 0 256 258"><defs><linearGradient id="IconifyId192f3e0275fa3feaf2" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#1FAF38"/><stop offset="100%" stop-color="#60D669"/></linearGradient><linearGradient id="IconifyId192f3e0275fa3feaf3" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#F9F9F9"/><stop offset="100%" stop-color="#FFF"/></linearGradient></defs><path fill="url(#IconifyId192f3e0275fa3feaf2)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"/><path fill="url(#IconifyId192f3e0275fa3feaf3)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z"/><path fill="#FFF" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"/></svg>
-
+    
                 </a>
             </section>
         </div>
@@ -189,5 +162,6 @@
         </div>
         <h6>© 2024 Lobisón. Todos los derechos reservados.</h6>
     </footer>
+    
 </body>
 </html>

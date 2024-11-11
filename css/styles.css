@@ -15,6 +15,7 @@ body{
     background-color: #eaeaea;
     overflow-x: hidden;
 
+
     /*Encabezado*/
     header {
         background-image: linear-gradient(to right, #7e7e7e, #909090, #a2a2a2, #b4b4b4, #c7c7c7, #c7c7c7, #c7c7c7, #c7c7c7, #b4b4b4, #a2a2a2, #909090, #7e7e7e);
@@ -48,19 +49,22 @@ body{
                     padding: 10px;
                     cursor: default;
                     
-                    h1{
-                        text-decoration:none;
-                        font-family: "Alfa Slab One", serif;
-                        text-transform: uppercase;
-                        text-shadow: 0 0 5px #fff;
-                        max-width: 100%;
-                        height: auto;
-                        font-size: 1.7rem;
-                        padding: 0 7px;
-                    }
+                    a {
+                        text-decoration: none;
+                        h1{
+                            color: #000;
+                            font-family: "Alfa Slab One", serif;
+                            text-transform: uppercase;
+                            text-shadow: 0 0 5px #fff;
+                            max-width: 100%;
+                            height: auto;
+                            font-size: 1.7rem;
+                            padding: 0 7px;
+                        }
+                    }     
                 
                     
-                    .logo {
+                    a .logo {
                         width: 4rem;            
                         height: auto;  
                     }
@@ -132,7 +136,7 @@ body{
         background-color: #eaeaea;
         font-weight: 100;
         position: relative;
-        top: 94px;
+        top: 90px;
 
         
 
@@ -492,7 +496,7 @@ body{
                                     
                                     background-color: #1e1e1e;
                                     color: white;
-                                    border: 2px solid #fff;
+
                                     
                                 }
                             }
@@ -636,6 +640,225 @@ body{
 
             
         }
+
+        /*Inicio Session*/
+        .login{
+            h2 {
+                font-style: italic;
+                font-weight: bold;
+                font-size: 32px;
+                margin: 10px;
+                padding: 0 15px;
+            }
+
+            .container_form {
+                margin: auto;
+                border: 2px solid #1e1e1e;
+                border-radius: 10px 0 10px 0;
+                width: 700px;
+                height: 319px;
+                padding: 10px 20px;
+                margin-top: 50px;
+
+                form {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    gap: 0;
+
+                    .input {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        
+    
+                        label {
+                            margin: 7px 0;
+                        }
+    
+                        input {
+                            width: 100%;
+                            padding: 5px 0;
+                            border-radius: 8px;
+                        }                
+                    }
+    
+                    .recuperar_contraseña_link {
+                        text-align: right;
+                        margin:  0;
+                        a {
+                            text-decoration: none;
+                            color: #d00;
+                        }
+                    }
+                    .boton input{
+                        width: 100%;
+                        font-size: 16px;
+                        background-color: transparent;
+                        padding: 5px 0;
+                    }
+    
+                    .boton input:hover{
+                        background-color: #1e1e1e;
+                        color: white;
+                    }
+
+                    .register_link{
+                        text-align: center;
+                        a {
+                            text-decoration: none;
+                            color: green;
+                        }
+
+                    }
+
+
+                }
+
+
+
+
+            }
+
+        }
+
+        /*Recuperar contraseña*/
+        .recuperar_contraseña {
+            h2 {
+                font-style: italic;
+                font-weight: bold;
+                font-size: 32px;
+                margin: 10px;
+                padding: 0 15px;
+            }
+
+            p {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                margin: auto;
+                text-align: center;
+                background-image: linear-gradient(to right, #1e1e1e, #222222, #262626, #2a2a2a, #2e2e2e, #2e2e2e, #2e2e2e, #2e2e2e, #2a2a2a, #262626, #222222, #1e1e1e);
+                color: white;
+                font-size: 18px;
+                height: 50%;
+                padding: 0 15px;
+                font-weight: 700;
+                border-radius: 7px 0 0 0;
+            }
+
+            .container_form {
+                margin: auto;
+                border: 2px solid #1e1e1e;
+                border-radius: 10px 0 10px 0;
+                width: 500px;
+                height: 319px;
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    height: 50%;
+                    padding: 10px 20px;
+
+
+                    .input {
+
+                        label {
+                            margin: 7px 0;
+                        }
+
+                        input {
+                            width: 100%;
+                            padding: 5px 0;
+                            border-radius: 8px;
+                        }
+                        
+                    }
+                    
+                    .boton input{
+                        width: 100%;
+                        font-size: 16px;
+                        background-color: transparent;
+                        padding: 5px 0;
+                    }
+                    .boton input:hover{
+                        background-color: #1e1e1e;
+                        color: white;
+                    }
+                }
+                
+            }
+        }
+
+        /*Registro*/
+        .registro {
+            h2 {
+                font-style: italic;
+                font-weight: bold;
+                font-size: 32px;
+                margin: 10px;
+                padding: 0 15px;
+            }
+
+            p {
+                font-size: 18px;
+                margin: 10px;
+                padding: 0 30px;
+            }
+
+            .container_form {
+                margin: auto;
+                border-radius: 10px 0 10px 0;
+                width: 500px;
+                height: auto;
+                margin-top: 50px;
+                padding: 15px;
+                box-shadow: 0 4px 8px #000a;
+
+                form {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    gap: 5px;
+                    .datos {
+                        display: flex;
+                        flex-direction: column;
+                        label {
+                            margin: 7px 0;
+                        }
+
+                        input {
+                            width: 100%;
+                            padding: 5px;
+                            border-radius: 8px;
+                        }
+                    }
+                    .botones input {
+                        width: 49%;
+                        font-size: 16px;
+                        background-color: transparent;
+                        padding: 5px 0;
+                        margin-top: 10px;
+                    }
+                    .botones input:hover{
+                        background-color: #1e1e1e;
+                        color: white;
+                    }
+                }
+
+            }
+        }
+
+        
+        
         }
 
 
@@ -686,7 +909,12 @@ body{
                         background-color: transparent;
                         border-radius: 5px;
                         padding: 7px;
-                    }   
+                    }
+                    
+                    .boton:hover    {
+                        background-color: #1e1e1e;
+                        color: white;
+                    }
                 }
 
                 .redes_sociales {
@@ -791,18 +1019,18 @@ body{
 
 }
 
-/*Celulares medianos y grandes*/
+/*Celulares*/
 @media only screen and (max-width: 600px)  {
     body {
         header {
             .container_header {
                 .container_left {
                     .box_logo {
-                        h1 {
+                        a h1 {
                             padding: 0 5px;
                             font-size: 16px;
                         }
-                        .logo{
+                        a .logo{
                             width: 43px;
                             img {
                                 width: 100%;
@@ -1035,6 +1263,44 @@ body{
                     margin: 0 0 0 10px;
                 }
             }
+
+            /*Iniciar Sesion*/
+            .login {
+                h2 {
+                    font-size: 18px;
+                }
+                .container_form {
+                    width: 90%;
+                }
+            }
+            /*Recuparar Cpntraseña*/
+            .recuperar_contraseña {
+                h2{ 
+                    font-size: 18px;
+                }
+
+                .container_form {
+                    width: 90%;
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+            /*Registro*/
+            .registro{
+                h2 {
+                    font-size: 18px;
+                }
+                p{
+                    font-size: 16px;
+                    margin: 0;
+                }
+                .container_form {
+                    width: 80%;
+                    margin-top: 15px;
+                }
+            }
         }
 
         footer {
@@ -1082,11 +1348,11 @@ body{
             .container_header {
                 .container_left {
                     .box_logo {
-                        h1 {
+                        a h1 {
                             padding: 0 5px;
                             font-size: 20px;
                         }
-                        .logo{
+                        a .logo{
                             width: 53px;
                             img {
                                 width: 100%;
@@ -1121,7 +1387,7 @@ body{
         }
 
         main {
-            top: 82px;
+            top: 79px;
 
             /*Index Destacados*/
             .productos_destacados {
@@ -1300,6 +1566,34 @@ body{
                     padding: 0 0 0 50px;
                 }
             }
+
+            /*Iniciar Sesion*/
+            .login {
+                h2 {
+                    font-size: 20px;
+                }
+                .container_form {
+                    width: 90%;
+                }
+            }
+            /*Recuperar Contraseña*/
+            .recuperar_contraseña {
+                h2 {
+                    font-size: 20px;
+
+                }
+            }
+
+            /*Registro*/
+            .registro{
+                h2 {
+                    font-size: 20px;
+                }
+
+                .container_form {
+                    margin-top: 15px;
+                }
+            }
         }
 
         footer {
@@ -1346,11 +1640,11 @@ body{
             .container_header {
                 .container_left {
                     .box_logo {
-                        h1 {
+                        a h1 {
                             padding: 0 5px;
                             font-size: 22px;
                         }
-                        .logo{
+                        a .logo{
                             width: 58px;
                             img {
                                 width: 100%;
@@ -1381,7 +1675,7 @@ body{
             } 
         }
         main{
-            top: 87px;
+            top: 84px;
 
 
             /*Index Destacados*/
@@ -1561,6 +1855,27 @@ body{
                 }
             }
 
+            /*Iniciar Sesion*/
+            .login {
+                h2 {
+                    font-size: 24px;
+                }
+                
+            }
+            /*Recuperar_contraseña*/
+            .recuperar_contraseña {
+                h2 {
+                    font-size: 24px;
+                }
+            }
+            /*Registro*/
+            .registro{
+                h2 {
+                    font-size: 24px;
+                }
+
+            }
+
             
         }
 
@@ -1608,11 +1923,11 @@ body{
             .container_header {
                 .container_left {
                     .box_logo {
-                        h1 {
+                        a h1 {
                             padding: 0 5px;
                             font-size: 28px;
                         }
-                        .logo{
+                        a .logo{
                             width: 64px;
                             img {
                                 width: 100%;
@@ -1837,6 +2152,25 @@ body{
                     padding: 0 0 0 50px;
                 }
             }
+
+            /*Iniciar Sesion*/
+            .login {
+                h2 {
+                    font-size: 28px;
+                }   
+            }
+            /*Recuperar_contraseña*/
+            .recuperar_contraseña {
+                h2 {
+                    font-size: 28px;
+                }
+            }
+            /*Registro*/
+            .registro{
+                h2 {
+                    font-size: 28px;
+                }
+            }    
             
         }
 
