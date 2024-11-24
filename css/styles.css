@@ -2310,7 +2310,7 @@ body{
                 grid-template-columns: 2fr 2fr;
 
                 .img_producto .container_img{
-                    height: 650px;
+                    height: 500px;
                 }
                 .description_producto {
                     h2 {
