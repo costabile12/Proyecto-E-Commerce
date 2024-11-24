@@ -229,33 +229,39 @@ body{
                             font-weight: bold;
                             margin-bottom: 7px;
                         }
-                        button {
-                            max-width: max-content;
-                            background-color: #1e1e1e;
-                            color: #ddd;
-                            letter-spacing: 1px;
-                            padding: 5px;
-                            border-radius: 8px;
-                            cursor: pointer
+                        a {
+                            text-decoration: none;
+                            
+                            button {
+                                max-width: max-content;
+                                background-color: #1e1e1e;
+                                color: #ddd;
+                                letter-spacing: 1px;
+                                padding: 5px;
+                                border-radius: 8px;
+                                cursor: pointer;
+    
+                            }
                         }
+
                         button:hover {
                             background-color: transparent;
-                            color: #1e1e1e;
                             padding: 5px;
                             border-radius: 8px;
-                            cursor: pointer
-                            
+                            cursor: pointer;
+                            color: #1e1e1e;
                         }
                     }
+                }
 
                     
 
-                }
+            }
 
                 
-            }
-        
         }
+        
+    
         /*Productos*/
         .container_productos {
             padding: 0 15px;
@@ -326,23 +332,31 @@ body{
                             font-weight: bold;
                             margin-bottom: 7px;
                         }
-                        button {
-                            max-width: max-content;
-                            background-color: #1e1e1e;
-                            color: #ddd;
-                            letter-spacing: 1px;
-                            padding: 5px;
-                            border-radius: 8px;
-                            cursor: pointer
+
+                        a {
+                            text-decoration: none;
+                            
+                            button {
+                                max-width: max-content;
+                                background-color: #1e1e1e;
+                                color: #ddd;
+                                letter-spacing: 1px;
+                                padding: 5px;
+                                border-radius: 8px;
+                                cursor: pointer;
+    
+                            }
                         }
+
                         button:hover {
                             background-color: transparent;
-                            color: #1e1e1e;
                             padding: 5px;
                             border-radius: 8px;
-                            cursor: pointer
-                            
+                            cursor: pointer;
+                            color: #1e1e1e;
                         }
+
+                        
                     }
 
                     
@@ -698,6 +712,7 @@ body{
                         font-size: 16px;
                         background-color: transparent;
                         padding: 5px 0;
+                        cursor: pointer;
                     }
     
                     .boton input:hover{
@@ -788,6 +803,7 @@ body{
                         font-size: 16px;
                         background-color: transparent;
                         padding: 5px 0;
+                        cursor: pointer;
                     }
                     .boton input:hover{
                         background-color: #1e1e1e;
@@ -848,6 +864,7 @@ body{
                         background-color: transparent;
                         padding: 5px 0;
                         margin-top: 10px;
+                        cursor: pointer;
                     }
                     .botones input:hover{
                         background-color: #1e1e1e;
@@ -858,10 +875,263 @@ body{
             }
         }
 
+        /*Vista de productos*/
+        .vista_producto {
+            display: grid;
+            grid-template-columns: 1fr 2fr; 
+            grid-template-rows: auto auto; 
+            gap: 20px; 
+            padding: 20px;
+
+            .img_producto {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                
+                .container_img {
+                    width: 100%;
+                    height: 700px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 8px;
+                        box-shadow: 0 8px 12px #999;
+                    }
+                }
+
+            }
+
+            .description_producto {
+                grid-column: 2 / 3; 
+                grid-row: 1 / 2;
+                
+                h2 {
+                    margin: 0 10px 7px 10px;
+                    font-style: italic;
+                    font-weight: bold;
+                }
+                
+                .precio {
+                    margin: 7px 10px 7px 10px;
+                    font-style: italic;
+                    font-weight: bold;
+                    font-size: 20px;
+                    
+                }
+    
+                .cuotas_sin_interes {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 0.5rem;
+                    margin: 7px 10px 7px 10px;
+                }
+    
+                .container_personalizacion {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+    
+                    .selector_colores_talle {
+                        margin: 7px 0 0 10px;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 2rem;
+                        flex-wrap: wrap;
+    
+                        .colores .seleccion_color {
+                            border: 1px solid #000;
+                            border-radius: 8px;
+                            background-color: transparent;
+                            padding: 3px;
+                            cursor: pointer;
+    
+                            option {
+                                background-color: #eaeaea;
+                            }    
+                        }
+                        .talle .seleccion_talle {
+                            border: 1px solid #000;
+                            border-radius: 8px;
+                            background-color: transparent;
+                            padding: 3px;
+                            cursor: pointer;
+    
+                            option {
+                                background-color: #eaeaea;
+                            }    
+                        }
+                    }
+                    .selector_unidades_boton {
+                        display:flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        gap: 1.5rem;
+    
+                        .unidades {
+                            margin: 7px 0 0 10px;
+    
+                            label {
+                                margin: 0 5px 0 0;
+                            }
+                            input {
+                                background-color: transparent;
+                                padding: 3px;
+                                border-radius: 8px;
+                                width: 100px;
+                                cursor: pointer;
+                            }
+                        }
+                        button {
+                            background-color: transparent;
+                            max-width: max-content;
+                            letter-spacing: 1px;
+                            color: #1e1e1e;
+                            padding: 5px;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            font-size: 18px;
+                            font-style: italic;
+                        }
+                        button:hover {
+                            
+                            background-color: #1e1e1e;
+                            color: #ddd;
+                            padding: 5px;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            font-weight: bold;
+                        }
+                            
+    
+                    }
+    
+                        
+                }
+    
+                .sector_ayuda {
+                    margin: 20px 0 0 10px;
+                    display: grid;
+                    grid-template-rows: repeat(3,0.3fr);
+                    gap: 1rem;
+                    
+                    .container_puntos_de_retiro {
+                        details {
+                            margin: 0 0 0 10px;
+    
+                            summary {
+                                font-size: 14px;
+                            }
+                            ul {
+                                list-style: none;
+                                padding: 10px;
+    
+                                li {
+                                    border: 1px solid #0004;
+                                    padding: 10px;
+                                    border-radius: 4px;
+                                }
+                            }
+                        }
+                    }
+    
+                }
+            }
+
+            .productos_relacionados {
+                grid-column: 1 / 3; 
+                grid-row: 2 / 3;    
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+                flex-direction: column;
+
+                h2 {
+                    margin: 10px 0 7px 10px;
+                    font-style: italic;
+                }
+
+                .container_card {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 0 50px;
+                    gap: 2rem;
+
+                    .producto_card {
+                        max-width: 300px;
+                        height: auto;
+                        text-align: center;
+                        overflow: hidden;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 8px #0001;
+                        margin: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        
+                        img {
+                            width: 100%;
+                            height: 450px;
+                        }
         
+                        .container_description {
+                            width: 100%;
+                            height: auto;
+                            margin: 10px;
+                            text-align: left;
+                            display: flex;
+                            flex-direction: column;
+                            padding: 16px;
         
+                            h3 {
+                                font-size: 16px;
+                                font-weight: bold;
+                                margin-bottom: 7px; 
+                            }
+                            .precio {
+                                font-size: 16px;
+                                font-weight: bold;
+                                margin-bottom: 7px;
+                            }
+    
+                            a {
+                                text-decoration: none;
+                                
+                                button {
+                                    max-width: max-content;
+                                    background-color: #1e1e1e;
+                                    color: #ddd;
+                                    letter-spacing: 1px;
+                                    padding: 5px;
+                                    border-radius: 8px;
+                                    cursor: pointer;
+        
+                                }
+                            }
+    
+                            button:hover {
+                                background-color: transparent;
+                                padding: 5px;
+                                border-radius: 8px;
+                                cursor: pointer;
+                                color: #1e1e1e;
+                            }
+                        }
+        
+                        
+        
+                    }
+                }
+    
+                
+            }   
         }
 
+        
+    }
 
 
     /*Pie de pagina*/
@@ -910,6 +1180,7 @@ body{
                         background-color: transparent;
                         border-radius: 5px;
                         padding: 7px;
+                        cursor: pointer;
                     }
                     
                     .boton:hover    {
@@ -1302,6 +1573,92 @@ body{
                     margin-top: 15px;
                 }
             }
+
+            /*Vista de producto*/
+            .vista_producto {
+                display:flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                .img_producto .container_img{
+                    height: 500px;
+                    padding: 0 30px;
+                }
+
+                .description_producto {
+                    h2{
+                        font-size:18px;
+                    }
+                    .precio{
+                        font-size: 20px;
+                    }
+                    .container_personalizacion .selector_colores_talle, .selector_unidades_boton {
+                        justify-content: center;
+                    }
+
+                    .container_personalizacion .selector_unidades_boton {
+                        flex-direction: column;
+                        align-content: space-around;
+
+                        .unidades {
+                            #unidades {
+                                width: 70px;
+                            }
+                        }
+
+                        button {
+                            margin: auto;
+                        }
+                    }
+
+
+
+                    .sector_ayuda {
+                        font-size: 14px;
+                    }
+                
+            }
+
+            .productos_relacionados{
+
+                    h2 {
+                        font-size: 18px;
+                    }
+
+                    .container_card {
+                        gap: 0;
+                        padding: 5px;
+
+                        .producto_card {
+                            max-width: 165px;
+                            margin: 5px;
+
+                            img {
+                                width: 100%;
+                                height: 270px;
+                            }
+                            .container_description {
+                                padding: 0;
+
+                                h3 {
+                                    font-size: 13px;
+                                }
+                                .precio {
+                                    font-size: 14px;
+                                }
+                                button {
+                                    padding: 5px;
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+
+                
+        }
         }
 
         footer {
@@ -1595,6 +1952,77 @@ body{
                     margin-top: 15px;
                 }
             }
+
+            /*Vista de producto*/
+            .vista_producto {
+                display:flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                .img_producto .container_img{
+                    height: 600px;
+                    padding: 0 50px;
+                }
+
+                .description_producto {
+                    h2{
+                        font-size:20px;
+                    }
+                    .precio{
+                        font-size: 22px;
+                    }
+                    .container_personalizacion .selector_colores_talle, .selector_unidades_boton {
+                        justify-content: center;
+                    }
+                    .container_personalizacion .selector_unidades_boton {
+                        flex-direction: column;
+                        align-content: space-around;
+                        button {
+                            margin: auto;
+                        }
+                    }
+
+                }
+
+                .productos_relacionados{
+
+                    h2 {
+                        font-size: 18px;
+                    }
+
+                    .container_card {
+                        gap: 2rem;
+                        padding: 5px;
+
+                        .producto_card {
+                            max-width: 165px;
+                            margin: 5px;
+
+                            img {
+                                width: 100%;
+                                height: 270px;
+                            }
+                            .container_description {
+                                padding: 0;
+
+                                h3 {
+                                    font-size: 13px;
+                                }
+                                .precio {
+                                    font-size: 14px;
+                                }
+                                button {
+                                    padding: 5px;
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+
+            }
         }
 
         footer {
@@ -1877,6 +2305,63 @@ body{
 
             }
 
+            /*Vista de producto*/
+            .vista_producto {
+                grid-template-columns: 2fr 2fr;
+
+                .img_producto .container_img{
+                    height: 650px;
+                }
+                .description_producto {
+                    h2 {
+                        font-size: 22px;
+                    }
+                    
+                    .container_personalizacion .selector_unidades_boton button{
+                        margin: auto;
+                    }
+
+                    .sector_ayuda {
+                        font-size: 14px;
+                    }
+                }
+
+                .productos_relacionados {
+                    h2 {
+                        font-size: 22px;
+                    }
+
+                    .container_card {
+                        gap: 2rem;
+                        padding: 5px;
+
+                        .producto_card {
+                            max-width: 169px;
+                            margin: 5px;
+
+                            img {
+                                width: 100%;
+                                height: 270px;
+                            }
+                            .container_description {
+                                padding: 0;
+
+                                h3 {
+                                    font-size: 13px;
+                                }
+                                .precio {
+                                    font-size: 14px;
+                                }
+                                button {
+                                    padding: 5px;
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
             
         }
 
@@ -2171,7 +2656,64 @@ body{
                 h2 {
                     font-size: 28px;
                 }
-            }    
+            }
+            /*Vista de producto*/
+            .vista_producto {
+                grid-template-columns: 2fr 2fr;
+
+                .img_producto .container_img{
+                    height: 650px;
+                }
+                .description_producto {
+                    h2 {
+                        font-size: 22px;
+                    }
+                    
+                    .container_personalizacion .selector_unidades_boton button{
+                        margin: auto;
+                    }
+
+                    .sector_ayuda {
+                        font-size: 14px;
+                    }
+                }
+
+                .productos_relacionados {
+                    h2 {
+                        font-size: 22px;
+                    }
+
+                    .container_card {
+                        gap: 2rem;
+                        padding: 5px;
+
+                        .producto_card {
+                            max-width: 182px;
+                            margin: 5px;
+
+                            img {
+                                width: 100%;
+                                height: 270px;
+                            }
+                            .container_description {
+                                padding: 0;
+
+                                h3 {
+                                    font-size: 13px;
+                                }
+                                .precio {
+                                    font-size: 14px;
+                                }
+                                button {
+                                    padding: 5px;
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
             
         }
 

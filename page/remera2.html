@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remera básica</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container_header">
+            <div class="container_left">
+            <!--Logo-->
+                <div class="box_logo">
+                    <a href="../index.html"><h1>Lobisón<h1></h1></a>
+                    <a href="../index.html"><img class="logo" src="../assets/img/logo.png" alt="Logo de la empresa"></a>
+                </div>
+            <!--Barra de Navegacion-->
+                <nav class="nav_bar">
+                        <ul class="nav_links">
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="./productos.html">Productos</a></li>
+                            <li><a href="./reseñas.html">Reseñas</a></li>
+                            <li><a href="./contacto.html">Contacto</a></li>
+                        </ul>
+                </nav>
+            </div>
+                <!--Busqueda, Usuario, Bolsa de compras-->
+                <div class="container_right">
+                    <ul class="nav_links">
+
+                        <li>
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path fill="currentColor" d="M325.8 0C223 0 139.6 83.4 139.6 186.2c0 33.5 9 64.8 24.4 92L0 442.2l23.3 46.5L69.8 512l164-164c27.1 15.5 58.5 24.4 92 24.4C428.6 372.4 512 289 512 186.2S428.6 0 325.8 0m0 314.2c-70.7 0-128-57.3-128-128s57.3-128 128-128s128 57.3 128 128s-57.3 128-128 128"/></svg>
+                            </button>
+                        </li>
+                        <li>
+                            <a href="./login.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20"><path fill="currentColor" d="M5 5a5 5 0 0 1 10 0v2A5 5 0 0 1 5 7zM0 16.68A19.9 19.9 0 0 1 10 14c3.64 0 7.06.97 10 2.68V20H0z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 13a5 5 0 0 1-5-5h2a3 3 0 0 0 3 3a3 3 0 0 0 3-3h2a5 5 0 0 1-5 5m0-10a3 3 0 0 1 3 3H9a3 3 0 0 1 3-3m7 3h-2a5 5 0 0 0-5-5a5 5 0 0 0-5 5H5c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2"/></svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="menu_item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            
+        </div>
+    </header>
+
+    <main>
+        <div class="vista_producto">
+
+            <section class="img_producto">
+                <div class="container_img">
+                    <img src="../assets/img/remera-basica-cuello-u-blanca-gola-marco-polo-1.jpg" alt="Remera Basica">
+                </div>
+            </section>
+
+            <section class="description_producto">
+                <!--Producto-->
+                <h2>Remera básica</h2>
+                <span class="precio">$24.999</span>
+                <div class="cuotas_sin_interes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path fill="#e11d48" d="M472 72H40a24.03 24.03 0 0 0-24 24v320a24.03 24.03 0 0 0 24 24h432a24.03 24.03 0 0 0 24-24V96a24.03 24.03 0 0 0-24-24m-8 32v64H48v-64ZM48 408V232h416v176Z"/><path fill="#e11d48" d="M88 312h64v32H88zm96 0h64v32h-64z"/></svg>
+                    <span style="color: #e11d48;">3 cuotas sin interes</span>
+                </div>
+
+                <form class="container_personalizacion">
+                
+                    <div class="selector_colores_talle">
+                        
+                        <div class="colores">
+                            <!--Selector de colores-->
+                            <label for="colors">Color</label>
+                            <select name="color" id="colors" class="seleccion_color">
+                                <option value="black">Negro</option>
+                                <option value="white">Blanco</option>
+                                <option value="blue">Azul</option>
+                                <option value="red">Roja</option>
+                                <option value="green">Verde</option>
+                            </select>
+                        </div>
+                        <div class="talle">
+                            <!--Selector de talle-->
+                            <label for="size">Talle</label>
+                            <select name="size" id="size" class="seleccion_talle">
+                                <option value="small">S</option>
+                                <option value="medium">M</option>
+                                <option value="large">L</option>
+                                <option value="extra_large">XL</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="selector_unidades_boton">
+                        <div class="unidades">
+                        <!--Cantidad de prendas-->
+                            <label for="unidades">Cantidad de unidades</label>
+                            <input type="number" value="1" min="1" id="unidades">
+                        </div>
+                        <!--Agregar al carrito-->
+                        <button>Agregar a la bolsa</button>
+                    </div>
+                </form>
+                <div class="sector_ayuda">
+                    <div class="container_puntos_de_retiro">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#1e1e1e" d="M4 6V4h16v2zm0 14v-6H3v-2l1-5h16l1 5v2h-1v6h-2v-6h-4v6zm2-2h6v-4H6z"/></svg>
+                        <p>Puntos de retiro</p> 
+                        <details>
+                            <summary>Ocultar opciones</summary>
+                            <ul>
+                                <li>Pick-Up Mataderos - Remedios 5349 - Atención de Lun a Vie de 9:00 a 13:00 y de 14:00 a 16:00 hs</li>
+                                <li>Lobisón Recoleta - Av. Santa Fe 1345 - Atención de Lun a Sab de 10:00 a 20:00 hs</li>
+                                <li>Lobisón Morón - 25 de Mayo 236 - Atención de Lun a Sab de 11:00 a 19:00 hs</li>
+                                <li>Lobisón Villa Luro - Av. Rivadavia 9516 - Lun a Sab 10:00 a 20:00 hs</li>
+                            </ul>
+                        </details>
+                    </div>
+                
+                    <div class="mensaje_para asesorar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#1e1e1e" d="M12.001 2c5.523 0 10 4.477 10 10s-4.477 10-10 10a9.95 9.95 0 0 1-5.03-1.355L2.005 22l1.352-4.968A9.95 9.95 0 0 1 2.001 12c0-5.523 4.477-10 10-10M8.593 7.3l-.2.008a1 1 0 0 0-.372.1a1.3 1.3 0 0 0-.294.228c-.12.113-.188.211-.261.306A2.73 2.73 0 0 0 6.9 9.62c.002.49.13.967.33 1.413c.409.902 1.082 1.857 1.97 2.742c.214.213.424.427.65.626a9.45 9.45 0 0 0 3.84 2.046l.568.087c.185.01.37-.004.556-.013a2 2 0 0 0 .833-.231a5 5 0 0 0 .383-.22q.001.002.125-.09c.135-.1.218-.171.33-.288q.126-.13.21-.302c.078-.163.156-.474.188-.733c.024-.198.017-.306.014-.373c-.004-.107-.093-.218-.19-.265l-.582-.261s-.87-.379-1.402-.621a.5.5 0 0 0-.176-.041a.48.48 0 0 0-.378.127c-.005-.002-.072.055-.795.931a.35.35 0 0 1-.368.13a1.4 1.4 0 0 1-.191-.066c-.124-.052-.167-.072-.252-.108a6 6 0 0 1-1.575-1.003c-.126-.11-.243-.23-.363-.346a6.3 6.3 0 0 1-1.02-1.268l-.059-.095a1 1 0 0 1-.102-.205c-.038-.147.061-.265.061-.265s.243-.266.356-.41c.11-.14.203-.276.263-.373c.118-.19.155-.385.093-.536q-.42-1.026-.868-2.041c-.059-.134-.234-.23-.393-.249q-.081-.01-.162-.016a3 3 0 0 0-.403.004z"/></svg>
+                        <p>
+                            TE ASESORAMOS<br>
+                            Podes contactarnos antes de realizar tu compra si tenes dudas o inquietudes.<br>
+                            Te vamos a ayudar.
+                        </p>
+                    </div>
+                    <div class="mensaje_cambios_devoluciones">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#1e1e1e" d="M12.075 15.475q-.725.025-1.387-.237t-1.163-.763t-.763-1.125t-.262-1.325q0-.25.025-.487t.1-.463q.1-.3-.012-.6t-.388-.425q-.3-.125-.587 0t-.388.425q-.125.375-.187.75T7 12q0 1 .388 1.913t1.087 1.612q.675.7 1.588 1.075t1.887.4l-.425.425q-.225.225-.225.525t.225.525t.525.225t.525-.225l1.6-1.6q.3-.3.3-.7t-.3-.7l-1.6-1.6q-.225-.225-.525-.225t-.525.225t-.225.525t.225.525zM11.9 8.5q.725 0 1.4.263t1.175.762t.763 1.125t.262 1.325q0 .25-.025.487t-.1.463q-.1.3.013.612t.387.438q.3.125.588 0t.387-.425q.125-.375.188-.763T17 12q0-1-.363-1.912T15.55 8.45q-.7-.7-1.612-1.062t-1.888-.363l.45-.45q.2-.225.2-.525t-.225-.525t-.525-.225t-.525.225l-1.6 1.6q-.3.3-.3.7t.3.7l1.6 1.6q.225.225.525.225t.525-.225t.225-.525t-.225-.525zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8"/></svg>
+                        <p>
+                            CAMBIOS y DEVOLUCIONES <br>
+                            Podes realizarlas en nuestros locales o consultar nuestras políticas de cambios y devoluciones. <br>
+                        </p>
+                    </div>
+            </section>
+
+            <section class="productos_relacionados">
+                <h2>Productos relacionados</h2>
+                <div class="container_card">
+                    <div class="producto_card">
+                        <a href="../page/remera_1.html"><img src="../assets/img/remera_over_destacada.jpeg" alt="Remera oversize" loading="lazy"></a>
+                        <div class="container_description">
+                            <h3>Remera básica</h3>
+                            <span class="precio">$27.999</span>
+                            <a href="./remera_1.html"><button>COMPRAR</button></a>
+                        </div>
+                    </div>
+                    <div class="producto_card">
+                        <a href="./remera3.html"><img src="../assets/img/remera_blanca_estampado.jpg" alt="Remera West Side" loading="lazy"></a>
+                        <div class="container_description">
+                            <h3>Remera West Side</h3>
+                            <span class="precio">$24.999</span>
+                            <a href="./remera3.html"><button>COMPRAR</button></a>
+                        </div>
+                    </div>
+                    <div class="producto_card">
+                        <a href="./remera4.html"><img src="../assets/img/bulls.png" alt="Remera Chicago Bulls" loading="lazy"></a>
+                        <div class="container_description">
+                            <h3>Remera chicago bulls</h3>
+                            <span class="precio">$24.999</span>
+                            <a href="./remera4.html"><button>COMPRAR</button></a>
+                        </div>
+                    </div>
+                    <div class="producto_card">
+                        <a href="./musculosa1.html"><img src="../assets/img/musculosa.jpg" alt="Musculosa Lobisón" loading="lazy"></a>
+                        <div class="container_description">
+                            <h3>Musculosa Lobisón</h3>
+                            <span class="precio">$19.999</span>
+                            <a href="./musculosa1.html"><button>COMPRAR</button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+    <footer> 
+        <div class="container_foot">
+
+        <section class="container_foot_left">
+        
+            <h4>Suscribite y obtene un 10% de descuento en tu primera compra </h4>
+            <form action="https://formspree.io/f/xwpkkbwe" method="post">
+                <input type="email" name="email_subscripto" class="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Email">
+                <input type="button" value="Enviar" class="boton">
+            </form>
+
+            <div class="redes_sociales">
+                <ul class="redes_sociales_links">
+
+                    <li>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 1024 1024"><path fill="currentColor" fill-rule="evenodd" d="M530.014 112.667c43.666-.667 86.997-.334 130.328-.667c2.667 51 21 102.999 58.33 138.998c37.332 37 89.997 54 141.328 59.666v134.332c-47.998-1.667-96.33-11.667-139.994-32.333c-19-8.667-36.665-19.667-53.998-31c-.333 97.332.334 194.665-.666 291.663c-2.667 46.666-18 93-44.998 131.332c-43.665 64-119.328 105.665-196.992 106.999c-47.664 2.666-95.329-10.334-135.994-34.333c-67.33-39.666-114.662-112.332-121.661-190.331c-.667-16.667-1-33.333-.334-49.666c6-63.333 37.332-123.999 85.997-165.332c55.33-47.999 132.66-70.999 204.99-57.332c.667 49.333-1.332 98.665-1.332 147.998c-33-10.667-71.664-7.667-100.663 12.333c-20.999 13.667-36.998 34.666-45.331 58.333c-7 17-5 35.666-4.667 53.666c8 54.666 60.664 100.665 116.662 95.665c37.332-.333 72.997-22 92.33-53.666c6.332-11 13.332-22.333 13.665-35.333c3.334-59.666 2-118.998 2.334-178.664c.333-134.332-.334-268.33.666-402.328"/></svg>
+                        </a>
+                    </li>
+                        
+                    <li>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="currentColor" d="M8 5.67C6.71 5.67 5.67 6.72 5.67 8S6.72 10.33 8 10.33S10.33 9.28 10.33 8S9.28 5.67 8 5.67M15 8c0-.97 0-1.92-.05-2.89c-.05-1.12-.31-2.12-1.13-2.93c-.82-.82-1.81-1.08-2.93-1.13C9.92 1 8.97 1 8 1s-1.92 0-2.89.05c-1.12.05-2.12.31-2.93 1.13C1.36 3 1.1 3.99 1.05 5.11C1 6.08 1 7.03 1 8s0 1.92.05 2.89c.05 1.12.31 2.12 1.13 2.93c.82.82 1.81 1.08 2.93 1.13C6.08 15 7.03 15 8 15s1.92 0 2.89-.05c1.12-.05 2.12-.31 2.93-1.13c.82-.82 1.08-1.81 1.13-2.93c.06-.96.05-1.92.05-2.89m-7 3.59c-1.99 0-3.59-1.6-3.59-3.59S6.01 4.41 8 4.41s3.59 1.6 3.59 3.59s-1.6 3.59-3.59 3.59m3.74-6.49c-.46 0-.84-.37-.84-.84s.37-.84.84-.84s.84.37.84.84a.8.8 0 0 1-.24.59a.8.8 0 0 1-.59.24Z"/></svg>
+                        </a>
+                    </li>
+                        
+                    <li>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131c.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="container_foot_mid">
+            <div class="nav_foot_mid">
+                <ul class="nav_foot_mid_links">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./sucursales.html">Sucursales</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="container_foot_right">
+            <div class="nav_foot_right">
+                <ul class="nav_foot_right_links">
+                    <li><a href="./envios.html">Envios</a></li>
+                    <li><a href="./cambios_devoluciones.html">Cambios y devoluciones</a></li>
+                    <li><a href="./mayoristas.html">Mayoristas</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="whatsapp">
+            <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32.25" viewBox="0 0 256 258"><defs><linearGradient id="IconifyId192f3e0275fa3feaf2" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#1FAF38"/><stop offset="100%" stop-color="#60D669"/></linearGradient><linearGradient id="IconifyId192f3e0275fa3feaf3" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#F9F9F9"/><stop offset="100%" stop-color="#FFF"/></linearGradient></defs><path fill="url(#IconifyId192f3e0275fa3feaf2)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"/><path fill="url(#IconifyId192f3e0275fa3feaf3)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z"/><path fill="#FFF" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"/></svg>
+
+            </a>
+        </section>
+    </div>
+    <div class="box_logo">
+        <img src="../assets/img/logo.png" alt="logo">
+    </div>
+    <h6>© 2024 Lobisón. Todos los derechos reservados.</h6>
+    </footer> 
+</body>
+</html>
