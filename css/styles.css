@@ -503,9 +503,11 @@ body{
                             }
                             .botones {
                                 text-align: center;
+                                
                                 input {
                                     background-color: transparent;
                                     width: 35%;
+                                    cursor: pointer;
                                 }
                                 input:hover{
                                     
