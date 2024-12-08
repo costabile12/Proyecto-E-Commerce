@@ -1323,10 +1323,11 @@ body{
             }
             
             .boton-icono:hover {
-                color: #fff;
-                background-color: #000;
+                color: #1e1e1e;
+                background-color: transparent;
+                box-shadow: none;
                 position: relative;
-                top: -5px;
+                top: 0px;
             }
             
             .links-derecha {
@@ -1774,10 +1775,11 @@ body{
             }
             
             .boton-icono:hover {
-                color: #fff;
-                background-color: #000;
+                color: #1e1e1e;
+                background-color:transparent;
                 position: relative;
-                top: -5px;
+                box-shadow: none    ;
+                top: 0px;
             }
             
             .links-derecha {
@@ -2198,10 +2200,11 @@ body{
             }
             
             .boton-icono:hover {
-                color: #fff;
-                background-color: #000;
+                color: #1e1e1e;
+                background-color: transparent;
                 position: relative;
-                top: -5px;
+                box-shadow: none;
+                top: 0px;
             }
             
             .links-derecha {
