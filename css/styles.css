@@ -86,7 +86,8 @@ body{
         
         .boton-icono:hover {
             color: #fff;
-            background-color: #000;
+            background-color: #1e1e1e;
+            box-shadow: 0 0 8px #fff;
             position: relative;
             top: -5px;
         }
@@ -1163,6 +1164,7 @@ body{
                         width: 50%;
                         margin-top: 16px;
                         height: 4rem;
+                        gap: 2rem;
 
                         svg {
                             color: #1e1e1e;
@@ -1340,7 +1342,7 @@ body{
 
         main {
             position: relative;
-            top: 68px;
+            top: 79px;
 
 
 
@@ -1470,8 +1472,13 @@ body{
                                         font-size: 14px;
                                     }
 
-                                    input, textarea {
+                                    input {
+                                        height: 30px;
                                         padding: 3px 0;
+                                    }
+
+                                    textarea {
+                                        height: 30px;
                                     }
                                 }
                             }
@@ -1683,6 +1690,7 @@ body{
                         }
 
                     }
+                    
                 }
                 .container_foot_mid , .container_foot_right {
                     width: 100%;
@@ -1902,6 +1910,30 @@ body{
                 }
                 .container_contacto .mensaje p{
                     font-size: 16px;
+                }
+                .formulario {
+                    padding: 5px;
+                    fieldset {
+                        legend h3 {
+                            font-size: 14px;
+                        }
+                        form  {
+                            div{
+                                label {
+                                    font-size: 14px;
+                                }
+
+                                input {
+                                    height: 30px;
+                                    padding: 3px 0;
+                                }
+
+                                textarea {
+                                    height: 30px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -2307,6 +2339,35 @@ body{
                     .mensaje p{
                         font-size: 18px;
                     }
+
+                    .formulario {
+                        padding: 5px;
+                        fieldset {
+                            legend h3 {
+                                font-size: 18px;
+                            }
+                            form  {
+                                div{
+                                    label {
+                                        font-size: 16px;
+                                    }
+
+                                    input {
+                                        height: 35px;
+                                        padding: 3px 0;
+                                    }
+
+                                    textarea {
+                                        height: 60px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    
+
+                    
                 }
                 
             }
@@ -2567,6 +2628,8 @@ body{
             }
         }
         main{
+
+            top: 82px;
             /*Index Destacados*/
             .productos_destacados {
                 padding: 30px;
@@ -2696,29 +2759,29 @@ body{
                         font-size: 22px;
                     }
                     .formulario {
-                        width: 40%;
-                        padding: 10px;
+                        padding: 5px;
                         fieldset {
                             legend h3 {
                                 font-size: 18px;
                             }
                             form  {
-                                width: 100%;
                                 div{
                                     label {
-                                        font-size: 18px;
+                                        font-size: 16px;
                                     }
 
-                                    input, textarea {
-                                        padding: 4px 0;
-                                    }   
-                                }
-                                .botones input{
-                                    font-size: 16px;
+                                    input {
+                                        height: 35px;
+                                        padding: 3px 0;
+                                    }
+
+                                    textarea {
+                                        height: 60px;
+                                    }
                                 }
                             }
                         }
-                    }   
+                    }
                 }
                 
             }
