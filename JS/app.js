@@ -145,67 +145,6 @@ const productos = [
     
 ]
 
-const contenedorDestacados = document.getElementById("contenedor-destacados");//Accedo al nodo de <div id ="productos-destacados">
-
-
-
-//Ciclo que muestra en pantalla los productos disponibles
-function mostrarProductos (productos){
-    console.log("Productos disponibles: ");
-    productos.forEach(producto => {
-        console.log(`Título: ${producto.titulo}`);
-        console.log('-----------------------------');
-});
-}
-mostrarProductos(productos);
-
-//Carga todos los productos destacados de forma dinamica en el index
-function cargarProductosDestacados(){
-    let destacados = [];
-
-    for(i=0; i<productos.length;i++){
-        if(productos[i].destacado === true){
-            destacados.push(productos[i])
-        }
-    }
-
-    
-    destacados.forEach(destacado =>{
-
-        const div = document.createElement('div');
-        div.classList.add("producto_card");
-        div.innerHTML = `
-                    <a href="./page/remera_1.html">
-                        <img src="${destacado.imagen}" alt="${destacado.titulo}" loading="lazy">
-                    </a>
-                    <div class="container_description">
-                        <h3>${destacado.titulo}</h3>
-                        <span class="precio">$${destacado.precio}</span>
-                        <a href="./page/remera_1.html" id="${destacado.id}"><button>COMPRAR</button></a>
-                    </div>
-                    `
-        contenedorDestacados.append(div);
-
-    })
-    
-}
-
-function cargarProductosRemeras(){
-    let remeras = [];
-    
-    for(i=0; i<productos.length;i++){
-        if(productos[i].categoria.nombre === 'Nombre'){
-            let.push(productos[i])
-        }
-    }
-    console.log(remeras)
-
-}
-
-
-cargarProductosDestacados();
-
-cargarProductosRemeras();
 
 
 
