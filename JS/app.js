@@ -186,7 +186,7 @@ function cargarProductosDestacados(contenedorId) {
                     <div class="container_description">
                         <h3>${producto.titulo}</h3>
                         <span class="precio">$${producto.precio}</span>
-                        <a href="{producto.url}"><button>COMPRAR</button></a>
+                        <a href="${producto.url}"><button>COMPRAR</button></a>
                     </div>    
                 </div>
         `;
