@@ -147,7 +147,71 @@ const productos = [
 
 
 
+// Función para cargar productos por categoría
+function cargarProductosPorCategoria(categoriaId, contenedorId) {
+    const contenedor = document.getElementById(contenedorId);
+    contenedor.innerHTML = ""; // Limpiamos el contenedor
 
+    // Filtrar productos por la categoría
+    const productosFiltrados = productos.filter(
+        producto => producto.categoria.id === categoriaId
+    );
+
+    // Crear las cartas
+    productosFiltrados.forEach(producto => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.titulo}" />
+            <h3>${producto.titulo}</h3>
+            <p>Precio: $${producto.precio}</p>
+        `;
+        contenedor.appendChild(card);
+    });
+}
+
+// Función para cargar productos destacados
+function cargarProductosDestacados(contenedorId) {
+    const contenedor = document.getElementById(contenedorId);
+    contenedor.innerHTML = ""; // Limpiamos el contenedor
+
+    // Filtrar productos destacados
+    const productosDestacados = productos.filter(producto => producto.destacado);
+
+    // Crear las cartas
+    productosDestacados.forEach(producto => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.titulo}" />
+            <h3>${producto.titulo}</h3>
+            <p>Precio: $${producto.precio}</p>
+        `;
+        contenedor.appendChild(card);
+    });
+}
+
+// Cargar productos dinámicamente según la página
+document.addEventListener("DOMContentLoaded", () => {
+    if (document.getElementById("destacadosContainer")) {
+        cargarProductosDestacados("destacadosContainer");
+    }
+    if (document.getElementById("remerasContainer")) {
+        cargarProductosPorCategoria("remeras", "remerasContainer");
+    }
+    if (document.getElementById("pantalonesContainer")) {
+        cargarProductosPorCategoria("pantalones", "pantalonesContainer");
+    }
+    if (document.getElementById("bermudasContainer")) {
+        cargarProductosPorCategoria("bermudas", "bermudasContainer");
+    }
+    if (document.getElementById("camisasContainer")) {
+        cargarProductosPorCategoria("camisas", "camisasContainer");
+    }
+    if (document.getElementById("musculosaContainer")) {
+        cargarProductosPorCategoria("musculosa", "musculosaContainer");
+    }
+});
 
 
 
