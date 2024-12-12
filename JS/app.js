@@ -181,11 +181,14 @@ function cargarProductosDestacados(contenedorId) {
     // Crear las cartas
     productosDestacados.forEach(producto => {
         const card = document.createElement("div");
-        card.classList.add("card");
-        card.innerHTML = `
-            <img src="${producto.imagen}" alt="${producto.titulo}" />
-            <h3>${producto.titulo}</h3>
-            <p>Precio: $${producto.precio}</p>
+        card.classList.add("producto_card");
+        card.innerHTML = `<a href="${producto.url}"><img src="${producto.imagen}" alt="${producto.titulo}" loading="lazy"></a>
+                    <div class="container_description">
+                        <h3>${producto.titulo}</h3>
+                        <span class="precio">$${producto.precio}</span>
+                        <a href="{producto.url}"><button>COMPRAR</button></a>
+                    </div>    
+                </div>
         `;
         contenedor.appendChild(card);
     });
@@ -193,8 +196,8 @@ function cargarProductosDestacados(contenedorId) {
 
 // Cargar productos dinámicamente según la página
 document.addEventListener("DOMContentLoaded", () => {
-    if (document.getElementById("destacadosContainer")) {
-        cargarProductosDestacados("destacadosContainer");
+    if (document.getElementById("contenedor-destacados")) {
+        cargarProductosDestacados("contenedor-destacados");
     }
     if (document.getElementById("remerasContainer")) {
         cargarProductosPorCategoria("remeras", "remerasContainer");
