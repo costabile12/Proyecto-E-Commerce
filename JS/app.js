@@ -160,11 +160,14 @@ function cargarProductosPorCategoria(categoriaId, contenedorId) {
     // Crear las cartas
     productosFiltrados.forEach(producto => {
         const card = document.createElement("div");
-        card.classList.add("card");
+        card.classList.add("producto_card");
         card.innerHTML = `
-            <img src="${producto.imagen}" alt="${producto.titulo}" />
-            <h3>${producto.titulo}</h3>
-            <p>Precio: $${producto.precio}</p>
+                    <a href="${producto.url}"><img src="${producto.imagen}" alt="${producto.titulo}" loading="lazy"></a>
+                    <div class="container_description">
+                        <h3>${producto.titulo}</h3>
+                        <span class="precio">$${producto.precio}</span>
+                        <a href="${producto.url}"><button>COMPRAR</button></a>
+                    </div>    
         `;
         contenedor.appendChild(card);
     });
