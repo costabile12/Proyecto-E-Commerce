@@ -1,48 +1,217 @@
-// Función para validar el formulario
-function validarFormulario() {
-    // Obtención de los valores de los campos
-    const nombre = document.getElementById("nameContacto").value.trim();
-    const email = document.getElementById("emailContacto").value.trim();
-    const mensaje = document.getElementById("mensajeContacto").value.trim();
+//Lista de Productos
+const productos = [
+    //Remeras
+    {
+        id:"remera-01",
+        titulo:"Remera oversize",
+        imagen:"../assets/img/remera_over_destacada.jpeg",
+        categoria:{
+            nombre:"Remeras",
+            id:"remeras",
+        },
+        precio:27999,
+        destacado: true,
+
+    },
+    {
+        id:"remera-02",
+        titulo:"Remera básica",
+        imagen:"../assets/img/remera-basica-cuello-u-blanca-gola-marco-polo-1.jpg",
+        categoria:{
+            nombre:"Remeras",
+            id:"remeras",
+        },
+        precio:24999,
+        destacado: true,
+    },
+    {
+        id:"remera-03",
+        titulo:"Remera west side",
+        imagen:"../assets/img/remera_blanca_estampado.jpg",
+        categoria:{
+            nombre:"Remeras",
+            id:"remeras",
+        },
+        precio:24999,
+        destacado: true,
+    },
+    {
+        id:"remera-04",
+        titulo:"Remera chicago bulls",
+        imagen:"../assets/img/bulls.png",
+        categoria:{
+            nombre:"Remeras",
+            id:"remeras",
+        },
+        precio:24999,
+        destacado: false,
+    },
+    {
+        id:"remera-05",
+        titulo:"Remera Piache Piu",
+        imagen:"../assets/img/oversize_negro_piache_piu.jpg",
+        categoria:{
+            nombre:"Remeras",
+            id:"remeras",
+        },
+        precio:24999,
+        destacado: false,
+
+    },
+
+    //Pantalones
+    {
+        id:"pantalon-01",
+        titulo:"Pantalon jean",
+        imagen:"../assets/img/pantalon_jean_desgastado.jpg",
+        categoria:{
+            nombre:"Pantalones",
+            id:"pantalones",
+        },
+        precio:24999,
+        destacado:false,
+    },
+    {
+        id:"pantalon-02",
+        titulo:"Remera Piache Piu",
+        imagen:"../assets/img/Pantalon-hombre-jean-ares-azul-hielo.jpg",
+        categoria:{
+            nombre:"Pantalones",
+            id:"pantalones",
+        },
+        precio:24999,
+        destacado:true,
+    },
+    {
+        id:"pantalon-03",
+        titulo:"Cargo",
+        imagen:"../assets/img/cargo_negro.jpg",
+        categoria:{
+            nombre:"Pantalones",
+            id:"pantalones",
+        },
+        precio:24999,
+        destacado:false,
+
+    },
+    //Bermudas
+    {
+        id:"bermuda-01",
+        titulo:"Bermuda de jogging",
+        imagen:"../assets/img/bermuda-rash.jpg",
+        categoria:{
+            nombre:"Bermudas",
+            id:"bermudas",
+        },
+        precio:17999,
+        destacado:false,
+
+    },
+    //Camisas
+    {
+        id:"camisa-01",
+        titulo:"Camisa lobisón",
+        imagen:"../assets/img/camisa_blanca.jpg",
+        categoria:{
+            nombre:"Camisas",
+            id:"camisas",
+        },
+        precio:29999,
+        destacado: false,
+    },
+    {
+        id:"camisa-02",
+        titulo:"Camisa Hawaiana",
+        imagen:"../assets/img/camisa_hawaiana.jpg",
+        categoria:{
+            nombre:"Camisas",
+            id:"camisas",
+        },
+        precio:29999,
+        destacado: true,
+    },
+    //Musculosas
+    {
+        id:"musculosa-01",
+        titulo:"Musculosa Lobisón",
+        imagen:"../assets/img/musculosa.jpg",
+        categoria:{
+            nombre:"Musculosas",
+            id:"musculosa",
+        },
+        precio:19999,
+        destacado: false,
+    },
     
-    // Expresiones regulares para validar
-    const nombreRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?:[ '-][A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$/;
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    
-    // Bandera de errores
-    let isValid = true;
-    
-    // Validación del campo "Nombre"
-    if (!nombreRegex.test(nombre)) {
-        console.log("El campo de nombre es invalido")
-        console.error("Error: Nombre inválido. Solo se permiten letras, espacios, apóstrofes y guiones.");
-        isValid = false;
-    }
-    
-    // Validación del campo "Email"
-    if (!emailRegex.test(email)) {
-        console.log("El campo de email es invalido ")
-        console.error("Error: Email inválido. Ingrese un correo electrónico en formato correcto.");
-        isValid = false;
-    }
-    
-    // Validación del campo "Mensaje"
-    if (mensaje.length < 10) {
-        console.log("El campo de mensaje es invalido")
-        console.error("Error: El mensaje debe tener al menos 10 caracteres.");
-        isValid = false;
-    }
-    
-    return isValid;
-}
-    
-// Evento de envío del formulario
-document.getElementById("formularioContacto").addEventListener("submit", function (e) {
-// Previene el envío del formulario si hay errores
-    if (!validarFormulario()) {
-        e.preventDefault(); // Detiene el envío si hay errores
-        console.warn("El formulario contiene errores. Revise los datos ingresados.");
-    } else {
-        console.log("Formulario enviado correctamente.");
-    }
+]
+
+const contenedorDestacados = document.getElementById("contenedor-destacados");//Accedo al nodo de <div id ="productos-destacados">
+
+
+
+//Ciclo que muestra en pantalla los productos disponibles
+function mostrarProductos (productos){
+    console.log("Productos disponibles: ");
+    productos.forEach(producto => {
+        console.log(`Título: ${producto.titulo}`);
+        console.log('-----------------------------');
 });
+}
+mostrarProductos(productos);
+
+//Carga todos los productos destacados de forma dinamica en el index
+function cargarProductosDestacados(){
+    let destacados = [];
+
+    for(i=0; i<productos.length;i++){
+        if(productos[i].destacado === true){
+            destacados.push(productos[i])
+        }
+    }
+
+    
+    destacados.forEach(destacado =>{
+
+        const div = document.createElement('div');
+        div.classList.add("producto_card");
+        div.innerHTML = `
+                    <a href="./page/remera_1.html">
+                        <img src="${destacado.imagen}" alt="${destacado.titulo}" loading="lazy">
+                    </a>
+                    <div class="container_description">
+                        <h3>${destacado.titulo}</h3>
+                        <span class="precio">$${destacado.precio}</span>
+                        <a href="./page/remera_1.html" id="${destacado.id}"><button>COMPRAR</button></a>
+                    </div>
+                    `
+        contenedorDestacados.append(div);
+
+    })
+    
+}
+
+function cargarProductosRemeras(){
+    let remeras = [];
+    
+    for(i=0; i<productos.length;i++){
+        if(productos[i].categoria.nombre === 'Nombre'){
+            let.push(productos[i])
+        }
+    }
+    console.log(remeras)
+
+}
+
+
+cargarProductosDestacados();
+
+cargarProductosRemeras();
+
+
+
+
+
+
+
+
+
