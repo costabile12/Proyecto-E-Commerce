@@ -199,8 +199,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("contenedor-destacados")) {
         cargarProductosDestacados("contenedor-destacados");
     }
-    if (document.getElementById("remerasContainer")) {
-        cargarProductosPorCategoria("remeras", "remerasContainer");
+    if (document.getElementById("contenedor-productos-remeras")) {
+        cargarProductosPorCategoria("remeras", "contenedor-productos-remeras");
     }
     if (document.getElementById("pantalonesContainer")) {
         cargarProductosPorCategoria("pantalones", "pantalonesContainer");
