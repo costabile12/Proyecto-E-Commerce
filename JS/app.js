@@ -177,7 +177,77 @@ function validarFormulario(formularioID) {
 }
 
 
+// Función para cargar productos por categoría
+function cargarProductosPorCategoria(categoriaId, contenedorId) {
+    const contenedor = document.getElementById(contenedorId);
+    contenedor.innerHTML = ""; // Limpiamos el contenedor
 
+    // Filtrar productos por la categoría
+    const productosFiltrados = productos.filter(
+        producto => producto.categoria.id === categoriaId
+    );
+
+    // Crear las cartas
+    productosFiltrados.forEach(producto => {
+        const card = document.createElement("div");
+        card.classList.add("producto_card");
+        card.innerHTML = `
+                    <a href="${producto.url}"><img src="${producto.imagen}" alt="${producto.titulo}" loading="lazy"></a>
+                    <div class="container_description">
+                        <h3>${producto.titulo}</h3>
+                        <span class="precio">$${producto.precio}</span>
+                        <a href="${producto.url}"><button>COMPRAR</button></a>
+                    </div>    
+        `;
+        contenedor.appendChild(card);
+    });
+}
+
+// Función para cargar productos destacados
+function cargarProductosDestacados(contenedorId) {
+    const contenedor = document.getElementById(contenedorId);
+    contenedor.innerHTML = ""; // Limpiamos el contenedor
+
+    // Filtrar productos destacados
+    const productosDestacados = productos.filter(producto => producto.destacado);
+
+    // Crear las cartas
+    productosDestacados.forEach(producto => {
+        const card = document.createElement("div");
+        card.classList.add("producto_card");
+        card.innerHTML = `<a href="${producto.url}"><img src="${producto.imagen}" alt="${producto.titulo}" loading="lazy"></a>
+                    <div class="container_description">
+                        <h3>${producto.titulo}</h3>
+                        <span class="precio">$${producto.precio}</span>
+                        <a href="${producto.url}"><button>COMPRAR</button></a>
+                    </div>    
+                </div>
+        `;
+        contenedor.appendChild(card);
+    });
+}
+
+// Cargar productos dinámicamente según la página
+document.addEventListener("DOMContentLoaded", () => {
+    if (document.getElementById("contenedor-destacados")) {
+        cargarProductosDestacados("contenedor-destacados");
+    }
+    if (document.getElementById("contenedor-productos-remeras")) {
+        cargarProductosPorCategoria("remeras", "contenedor-productos-remeras");
+    }
+    if (document.getElementById("pantalonesContainer")) {
+        cargarProductosPorCategoria("pantalones", "pantalonesContainer");
+    }
+    if (document.getElementById("bermudasContainer")) {
+        cargarProductosPorCategoria("bermudas", "bermudasContainer");
+    }
+    if (document.getElementById("camisasContainer")) {
+        cargarProductosPorCategoria("camisas", "camisasContainer");
+    }
+    if (document.getElementById("musculosaContainer")) {
+        cargarProductosPorCategoria("musculosa", "musculosaContainer");
+    }
+});
 
 
 // Inicializar la carga de productos al cargar la página
