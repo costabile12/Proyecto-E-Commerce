@@ -1,155 +1,226 @@
 //Lista de Productos
-const productos = [
-    //Remeras
-    {
-        id:"remera-01",
-        titulo:"Remera oversize",
-        imagen:"../assets/img/remera_over_destacada.jpeg",
-        categoria:{
-            nombre:"Remeras",
-            id:"remeras",
-        },
-        precio:27999,
-        destacado: true,
+let productos = [];
 
-    },
-    {
-        id:"remera-02",
-        titulo:"Remera básica",
-        imagen:"../assets/img/remera-basica-cuello-u-blanca-gola-marco-polo-1.jpg",
-        categoria:{
-            nombre:"Remeras",
-            id:"remeras",
-        },
-        precio:24999,
-        destacado: true,
-    },
-    {
-        id:"remera-03",
-        titulo:"Remera west side",
-        imagen:"../assets/img/remera_blanca_estampado.jpg",
-        categoria:{
-            nombre:"Remeras",
-            id:"remeras",
-        },
-        precio:24999,
-        destacado: true,
-    },
-    {
-        id:"remera-04",
-        titulo:"Remera chicago bulls",
-        imagen:"../assets/img/bulls.png",
-        categoria:{
-            nombre:"Remeras",
-            id:"remeras",
-        },
-        precio:24999,
-        destacado: false,
-    },
-    {
-        id:"remera-05",
-        titulo:"Remera Piache Piu",
-        imagen:"../assets/img/oversize_negro_piache_piu.jpg",
-        categoria:{
-            nombre:"Remeras",
-            id:"remeras",
-        },
-        precio:24999,
-        destacado: false,
+// Función para cargar el archivo JSON
+async function cargarProductosDesdeJSON() { 
+    try {
+        const response = await fetch("../JS/productos.json");
+        if (!response.ok) throw new Error("No se pudo cargar el archivo JSON");
+        productos = await response.json();
+    } catch (error) {
+        console.error("Error al cargar los productos:", error);
+    }
+}
 
-    },
+// Función para cargar productos por categoría
+function cargarProductosPorCategoria(categoriaId, contenedorId) {
+    const contenedor = document.getElementById(contenedorId);
+    contenedor.innerHTML = ""; // Limpiamos el contenedor
 
-    //Pantalones
-    {
-        id:"pantalon-01",
-        titulo:"Pantalon jean",
-        imagen:"../assets/img/pantalon_jean_desgastado.jpg",
-        categoria:{
-            nombre:"Pantalones",
-            id:"pantalones",
-        },
-        precio:24999,
-        destacado:false,
-    },
-    {
-        id:"pantalon-02",
-        titulo:"Remera Piache Piu",
-        imagen:"../assets/img/Pantalon-hombre-jean-ares-azul-hielo.jpg",
-        categoria:{
-            nombre:"Pantalones",
-            id:"pantalones",
-        },
-        precio:24999,
-        destacado:true,
-    },
-    {
-        id:"pantalon-03",
-        titulo:"Cargo",
-        imagen:"../assets/img/cargo_negro.jpg",
-        categoria:{
-            nombre:"Pantalones",
-            id:"pantalones",
-        },
-        precio:24999,
-        destacado:false,
+    const productosFiltrados = productos.filter(
+        (producto) => producto.categoria.id === categoriaId && producto.disponible
+    );
 
-    },
-    //Bermudas
-    {
-        id:"bermuda-01",
-        titulo:"Bermuda de jogging",
-        imagen:"../assets/img/bermuda-rash.jpg",
-        categoria:{
-            nombre:"Bermudas",
-            id:"bermudas",
-        },
-        precio:17999,
-        destacado:false,
+    productosFiltrados.forEach((producto) => {
+        const card = document.createElement("div");
+        card.classList.add("producto_card");
+        const url = `/productos/${producto.id}`;
+        card.innerHTML = `
+            <a href="${url}"><img src="${producto.imagen}" alt="${producto.titulo}" loading="lazy"></a>
+            <div class="container_description">
+                <h3>${producto.titulo}</h3>
+                <span class="precio">$${producto.precio}</span>
+                <a href="${url}"><button id="${producto.id}>COMPRAR</button></a>
+            </div>    
+        `;
+        contenedor.appendChild(card);
+    });
+}
 
-    },
-    //Camisas
-    {
-        id:"camisa-01",
-        titulo:"Camisa lobisón",
-        imagen:"../assets/img/camisa_blanca.jpg",
-        categoria:{
-            nombre:"Camisas",
-            id:"camisas",
-        },
-        precio:29999,
-        destacado: false,
-    },
-    {
-        id:"camisa-02",
-        titulo:"Camisa Hawaiana",
-        imagen:"../assets/img/camisa_hawaiana.jpg",
-        categoria:{
-            nombre:"Camisas",
-            id:"camisas",
-        },
-        precio:29999,
-        destacado: true,
-    },
-    //Musculosas
-    {
-        id:"musculosa-01",
-        titulo:"Musculosa Lobisón",
-        imagen:"../assets/img/musculosa.jpg",
-        categoria:{
-            nombre:"Musculosas",
-            id:"musculosa",
-        },
-        precio:19999,
-        destacado: false,
-    },
+// Función para cargar productos destacados
+function cargarProductosDestacados(contenedorId) {
+    const contenedor = document.getElementById(contenedorId);
+    contenedor.innerHTML = ""; // Limpiamos el contenedor
+
+    const productosDestacados = productos.filter(
+        (producto) => producto.destacado && producto.disponible
+    );
+
+    productosDestacados.forEach((producto) => {
+        const card = document.createElement("div");
+        card.classList.add("producto_card");
+        const url = `/productos/${producto.id}`;
+        card.innerHTML = `
+            <a href="${url}"><img src="${producto.img_destacado}" alt="${producto.titulo}" loading="lazy"></a>
+            <div class="container_description">
+                <h3>${producto.titulo}</h3>
+                <span class="precio">$${producto.precio}</span>
+                <a href="${url}"><button id="${producto.id}">COMPRAR</button></a>
+            </div>    
+        `;
+        contenedor.appendChild(card);
+    });
+}
+
+//Funcion mostrar en consola productos disponibles
+function mostrarDisponibles() {
+    const productosDisponibles = [];
     
-]
+    for (let i = 0; i < productos.length; i++) {
+        if (productos[i].disponible === true) {
+            productosDisponibles.push(productos[i].titulo); // Agregar solo el título al array
+        }
+    }
+
+    console.log("Los productos disponibles son:");
+    productosDisponibles.forEach(productoDisponible => {
+        console.log(productoDisponible);
+    });
+}
+
+//Funcio para validar un formulario
+function validarFormulario(formularioID) {
+    const nombre = document.getElementById("name").value; // Añadir .value para obtener el valor del input
+    const email = document.getElementById("email").value;
+    const mensaje = document.getElementById("mensaje").value;
+    const password1 = document.getElementById("contraseña1").value;
+    const password2 = document.getElementById("contraseña2").value;
+    const telefono = document.getElementById("telefono").value;
+
+    const contenedorErrores = document.getElementById("errores");
+
+    const regexNombre = /^[A-Za-záéíóúÁÉÍÓÚüÜñÑ\s]+$/;
+    const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const regexPhone = /^\+?(\d{1,3})?[-.\s]?\(?\d{1,4}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}$/;
+    const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    let esValido = true;
+    
+    // Limpiar errores previos
+    contenedorErrores.innerHTML = "";
+
+    // Validación de nombre
+    if (!regexNombre.test(nombre)) {
+        console.log("El campo de nombre es invalido");
+        let error = document.createElement("li");
+        error.className = "Mensaje_de_error";
+        error.textContent = "El campo de nombre es inválido: solo se permiten letras, espacios, apostrofes y guiones";
+        contenedorErrores.appendChild(error);
+        esValido = false;
+    }
+
+    // Validación de email
+    if (!regexEmail.test(email)) {
+        console.log("El campo de email es invalido");
+        let error = document.createElement("li");
+        error.className = "Mensaje_de_error";
+        error.textContent = "El campo de email es inválido";
+        contenedorErrores.appendChild(error);
+        esValido = false;
+    }
+
+    // Validación de mensaje
+    if (mensaje.length < 10) {
+        console.log("El campo de mensaje es invalido");
+        let error = document.createElement("li");
+        error.className = "Mensaje_de_error";
+        error.textContent = "El campo de mensaje es invalido por ser demasiado corto, mínimo 10 caracteres";
+        contenedorErrores.appendChild(error);
+        esValido = false;
+    }
+
+    // Validación de teléfono
+    if (!regexPhone.test(telefono)) {
+        console.log("El campo de telefono es invalido");
+        let error = document.createElement("li");
+        error.className = "Mensaje_de_error";
+        error.textContent = "El campo de telefono es invalido";
+        contenedorErrores.appendChild(error);
+        esValido = false;
+    }
+
+    // Validación de contraseña
+    if (!regexPassword.test(password1)) {
+        console.log("El campo de contraseña es invalido");
+        let error = document.createElement("li");
+        error.className = "Mensaje_de_error";
+        error.textContent = "El campo de contraseña es invalido: mínimo 8 caracteres, una letra minúscula, una letra mayúscula, un número y un carácter especial";
+        contenedorErrores.appendChild(error);
+        esValido = false;
+    }
+
+    // Validación de confirmación de contraseña
+    if (!regexPassword.test(password2)) {
+        console.log("El campo de confirmar contraseña es invalido");
+        let error = document.createElement("li");
+        error.className = "Mensaje_de_error";
+        error.textContent = "El campo de confirmar contraseña es invalido: mínimo 8 caracteres, una letra minúscula, una letra mayúscula, un número y un carácter especial";
+        contenedorErrores.appendChild(error);
+        esValido = false;
+    }
+
+    // Validación de que las contraseñas coincidan
+    if (password1 !== password2) {
+        console.log("Las contraseñas no son iguales");
+        let error = document.createElement("li");
+        error.className = "Mensaje_de_error";
+        error.textContent = "Verificar que las contraseñas sean iguales";
+        contenedorErrores.appendChild(error);
+        esValido = false;
+    }
+
+    if (esValido) {
+        console.log("Formulario verificado");
+    }
+
+    return esValido;
+}
 
 
 
 
 
+// Inicializar la carga de productos al cargar la página
+document.addEventListener("DOMContentLoaded", async () => {
+    await cargarProductosDesdeJSON();
 
+    mostrarDisponibles();
+
+    if (document.getElementById("contenedor-destacados")) {
+        cargarProductosDestacados("contenedor-destacados");
+    }
+    if (document.getElementById("contenedorRemeras")) {
+        cargarProductosPorCategoria("remeras", "contenedorRemeras");
+    }
+    if (document.getElementById("contenedorPantalones")) {
+        cargarProductosPorCategoria("pantalones", "contenedorPantalones");
+    }
+    if (document.getElementById("contenedorBermudas")) {
+        cargarProductosPorCategoria("bermudas", "contenedorBermudas");
+    }
+    if (document.getElementById("contenedorCamisas")) {
+        cargarProductosPorCategoria("camisas", "contenedorCamisas");
+    }
+    if (document.getElementById("contenedorMusculosas")) {
+        cargarProductosPorCategoria("musculosas", "contenedorMusculosas");
+    }
+
+
+    // Llamar a la función validarFormulario
+    const formulario = document.getElementById("formularioID"); // Suponiendo que tienes un formulario con este id
+    if (formulario) {
+        formulario.addEventListener("submit", (event) => {
+            event.preventDefault();  // Evitar que el formulario se envíe si no es válido
+            if (validarFormulario(formulario.id)) {
+                // Si es válido, puedes proceder con el envío del formulario
+                formulario.submit();  // O cualquier otra acción que desees realizar
+            }
+        });
+    }
+    
+
+
+});
 
 
 

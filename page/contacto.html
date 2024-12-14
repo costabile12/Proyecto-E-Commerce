@@ -109,20 +109,20 @@
                             <div>
                                 <label for="name">Nombre</label>
                                 <br>
-                                <input type="text" name="name" id="nameContacto" required pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?:[ '-][A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$
+                                <input type="text" name="name" id="name" required pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?:[ '-][A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$
                                 ">
                             </div>
                             
                             <div>
                                 <label for="email">Email</label>
                                 <br>
-                                <input type="email" name="email" id="emailContacto" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                                <input type="email" name="email" id="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
                             </div>
 
                             <div>
                                 <label for="mensaje">Mensaje</label>
                                 <br>
-                                <textarea name="mensaje" id="mensajeContacto" required rows="5" cols="25"></textarea>
+                                <textarea name="mensaje" id="mensaje" required rows="5" cols="25"></textarea>
                             </div>
 
                             <div class="botones">
@@ -130,6 +130,11 @@
                                 <input type="reset" value="Borrar">
                             </div>
 
+                            <div id="contenedorErrores">
+                                <ul id="errores">
+                                    <!--Aqui deberia mostrar los errores de porque no se manda el formulario--> 
+                                </ul>
+                            </div>
                         </form>
                     </fieldset>
                 </div>

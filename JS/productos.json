@@ -1,0 +1,225 @@
+[
+    {
+        "id":"remera-01",
+        "titulo":"Remera oversize",
+        "img_destacado":"./assets/img/remera_over_destacada.jpeg",
+        "imagen":"../assets/img/remera_over_destacada.jpeg",
+        "categoria":{
+            "nombre":"Remeras",
+            "id":"remeras"
+        },
+        "precio":27999,
+        "destacado": true,
+        "disponible": true,
+        "colores":["Negro","Blanco"],
+        "talles":["S","M","L","XL"]
+    
+    },
+    {
+        "id":"remera-02",
+        "titulo":"Remera básica",
+        "img_destacado":"./assets/img/remera-basica-cuello-u-blanca-gola-marco-polo-1.jpg",
+        "imagen":"../assets/img/remera-basica-cuello-u-blanca-gola-marco-polo-1.jpg",
+        "categoria":{
+            "nombre":"Remeras",
+            "id":"remeras"
+        },
+        "precio":24999,
+        "destacado": true,
+        "disponible": true,
+        "colores":["Negro","Blanco","Azul","Rojo"],
+        "talles":["S","M","L","XL"]
+    },
+    {
+        "id":"remera-03",
+        "titulo":"Remera west side",
+        "img_destacado":"./assets/img/remera_blanca_estampado.jpg",
+        "imagen":"../assets/img/remera_blanca_estampado.jpg",
+        "categoria":{
+            "nombre":"Remeras",
+            "id":"remeras"
+        },
+        "precio":24999,
+        "destacado": true,
+        "disponible": true,
+        "colores":["Negro","Blanco","Gris"],
+        "talles":["S","M","L","XL"]
+    },
+    {
+        "id":"remera-04",
+        "titulo":"Remera chicago bulls",
+        "img_destacado":"./assets/img/bulls.png",
+        "imagen":"../assets/img/bulls.png",
+        "categoria":{
+            "nombre":"Remeras",
+            "id":"remeras"
+        },
+        "precio":24999,
+        "destacado": false,
+        "disponible": true,
+        "colores":["Rojo","Negro","Blanco"],
+        "talles":["S","M","L","XL"]
+    },
+    {
+        "id":"remera-05",
+        "titulo":"Remera Piache Piu",
+        "img_destacado":"./assets/img/oversize_negro_piache_piu.jpg",
+        "imagen":"../assets/img/oversize_negro_piache_piu.jpg",
+        "categoria":{
+            "nombre":"Remeras",
+            "id":"remeras"
+        },
+        "precio":24999,
+        "destacado": false,
+        "disponible": true,
+        "colores":["Negro","Blanco"],
+        "talles":["S","M","L","XL"]
+    
+    },
+    
+    
+    {
+        "id":"pantalon-01",
+        "titulo":"Pantalon jean",
+        "img_destacado":"./assets/img/pantalon_jean_desgastado.jpg",
+        "imagen":"../assets/img/pantalon_jean_desgastado.jpg",
+        "categoria":{
+            "nombre":"Pantalones",
+            "id":"pantalones"
+        },
+        "precio":24999,
+        "destacado":false,
+        "disponible": true,
+        "colores":["Azul"],
+        "talles":["S","M","L","XL"]
+    },
+    {
+        "id":"pantalon-02",
+        "titulo":"Remera Piache Piu",
+        "img_destacado":"./assets/img/Pantalon-hombre-jean-ares-azul-hielo.jpg",
+        "imagen":"../assets/img/Pantalon-hombre-jean-ares-azul-hielo.jpg",
+        "categoria":{
+            "nombre":"Pantalones",
+            "id":"pantalones"
+        },
+        "precio":24999,
+        "destacado":true,
+        "disponible": true,
+        "colores":["Azul","Celeste"],
+        "talles":["S","M","L","XL"]
+    },
+    {
+        "id":"pantalon-03",
+        "titulo":"Cargo",
+        "img_destacado":"./assets/img/cargo_negro.jpg",
+        "imagen":"../assets/img/cargo_negro.jpg",
+        "categoria":{
+            "nombre":"Pantalones",
+            "id":"pantalones"
+        },
+        "precio":24999,
+        "destacado":false,
+        "disponible": true,
+        "colores":["Negro","Verde","Beige"],
+        "talles":["S","M","L","XL"]
+    
+    },
+    
+    {
+        "id":"bermuda-01",
+        "titulo":"Bermuda de jogging",
+        "img_destacado":"./assets/img/bermuda-rash.jpg",
+        "imagen":"../assets/img/bermuda-rash.jpg",
+        "categoria":{
+            "nombre":"Bermudas",
+            "id":"bermudas"
+        },
+        "precio":17999,
+        "destacado":false,
+        "disponible": true,
+        "colores":["Negro","Gris"],
+        "talles":["S","M","XL"]
+    
+    },
+    
+    {
+        "id":"camisa-01",
+        "titulo":"Camisa lobisón",
+        "img_destacado":"./assets/img/camisa_blanca.jpg",
+        "imagen":"../assets/img/camisa_blanca.jpg",
+        "categoria":{
+            "nombre":"Camisas",
+            "id":"camisas"
+        },
+        "precio":29999,
+        "destacado": false,
+        "disponible": true,
+        "colores":["Negro","Blanco","Azul","Rojo","Rosa"],
+        "talles":["S","M","L","XL"]
+    },
+    {
+        "id":"camisa-02",
+        "titulo":"Camisa Hawaiana",
+        "img_destacado":"./assets/img/camisa_hawaiana.jpg",
+        "imagen":"../assets/img/camisa_hawaiana.jpg",
+        "categoria":{
+            "nombre":"Camisas",
+            "id":"camisas"
+        },
+        "precio":29999,
+        "destacado": true,
+        "disponible": true,
+        "colores":["Negro","Blanco","Verde","Rojo"],
+        "talles":["S","M","L","XL"]
+    },
+    
+    {
+        "id": "camisa-03",
+        "titulo":"Camisa manga corta",
+        "img_destacado":"./assets/img/camisa_corta.jpg",
+        "imagen":"../assets/img/camisa_corta.jpg",
+        "categoria":{
+            "nombre":"Camisas",
+            "id":"camisas"
+        },
+        "precio":29999,
+        "destacado": true,
+        "disponible": false,
+        "colores":["Negro","Blanco","Beige","Azul"],
+        "talles":["S","M","L","XL"]
+    },
+    
+    
+    {
+        "id":"musculosa-01",
+        "titulo":"Musculosa Lobisón",
+        "img_destacado":"./assets/img/musculosa.jpg",
+        "imagen":"../assets/img/musculosa.jpg",
+        "categoria":{
+            "nombre":"Musculosas",
+            "id":"musculosa"
+        },
+        "precio":19999,
+        "destacado": false,
+        "disponible": true,
+        "colores":["Negro","Blanco","Amarillo","Rosa"],
+        "talles":["S","M","L","XL"]
+    },
+    
+    
+    {
+        "id":"campera-01",
+        "titulo":"Campera Lobisón",
+        "img_destacado":"./assets/img/campera_media_estacion.jpg", 
+        "imagen":"../assets/img/campera_media_estacion.jpg", 
+        "categoria":{
+            "nombre":"Camperas",
+            "id":"camperas"
+        },
+        "precio":39999,
+        "destacado": false,
+        "disponible": false,
+        "colores":["Beige"],
+        "talles":["M","L"]
+    }
+]
