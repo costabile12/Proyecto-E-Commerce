@@ -211,11 +211,15 @@ body{
                             font-weight: bold;
                             margin-bottom: 7px;
                         }
-                        a {
-                            text-decoration: none;
-                            
+                        .contenedorBotones {
+                            display:flex;
+                            flex-direction: row;
+                            gap: 1rem;
+                            width: 90%;
+
                             button {
                                 max-width: max-content;
+                                font-size: 10px;
                                 background-color: #1e1e1e;
                                 color: #ddd;
                                 letter-spacing: 1px;
@@ -224,14 +228,36 @@ body{
                                 cursor: pointer;
     
                             }
+
+                            a {
+                                text-decoration: none;
+                                
+                                button {
+                                    font-size: 12px;
+                                    max-width: max-content;
+                                    background-color: #1e1e1e;
+                                    color: #ddd;
+                                    letter-spacing: 1px;
+                                    padding: 5px;
+                                    border-radius: 8px;
+                                    cursor: pointer;
+        
+                                }
+                            }
+    
+                            button:hover {
+                                background-color: transparent;
+                                padding: 5px;
+                                border-radius: 8px;
+                                cursor: pointer;
+                                color: #1e1e1e;
+                            }
                         }
 
-                        button:hover {
-                            background-color: transparent;
-                            padding: 5px;
-                            border-radius: 8px;
-                            cursor: pointer;
-                            color: #1e1e1e;
+                        .descripcion{
+                            font-size: 12px;
+                            margin-top: 5px;
+                            
                         }
                     }
                 }
@@ -315,11 +341,15 @@ body{
                             margin-bottom: 7px;
                         }
 
-                        a {
-                            text-decoration: none;
-                            
+                        .contenedorBotones {
+                            display:flex;
+                            flex-direction: row;
+                            gap: 1rem;
+                            width: 90%;
+
                             button {
                                 max-width: max-content;
+                                font-size: 10px;
                                 background-color: #1e1e1e;
                                 color: #ddd;
                                 letter-spacing: 1px;
@@ -328,15 +358,39 @@ body{
                                 cursor: pointer;
     
                             }
+
+                            a {
+                                text-decoration: none;
+                                
+                                button {
+                                    font-size: 12px;
+                                    max-width: max-content;
+                                    background-color: #1e1e1e;
+                                    color: #ddd;
+                                    letter-spacing: 1px;
+                                    padding: 5px;
+                                    border-radius: 8px;
+                                    cursor: pointer;
+        
+                                }
+                            }
+    
+                            button:hover {
+                                background-color: transparent;
+                                padding: 5px;
+                                border-radius: 8px;
+                                cursor: pointer;
+                                color: #1e1e1e;
+                            }
                         }
 
-                        button:hover {
-                            background-color: transparent;
-                            padding: 5px;
-                            border-radius: 8px;
-                            cursor: pointer;
-                            color: #1e1e1e;
+                        .descripcion{
+                            font-size: 12px;
+                            margin-top: 5px;
+                            
                         }
+
+
 
                         
                     }
@@ -476,11 +530,15 @@ body{
                                 font-size: 16px;
                             }
 
+                            .containerInputs {
+                                margin: auto;
+                                width: 85%;
+                            }
+
                             input, textarea{
                                 width: 100%;
                                 box-sizing: border-box;
-                                padding: 6px 8px;
-                                margin-bottom: 25px;
+                                margin-bottom: 5px;
                                 border:1px solid #000;
                                 border-radius: 8px;
                             }
@@ -500,8 +558,11 @@ body{
                                     
                                 }
                             }
+
                         }
                     }
+
+
                 }
             }    
         }
@@ -1176,11 +1237,15 @@ body{
                             margin-bottom: 7px;
                         }
 
-                        a {
-                            text-decoration: none;
-                            
+                        .contenedorBotones {
+                            display:flex;
+                            flex-direction: row;
+                            gap: 1rem;
+                            width: 90%;
+
                             button {
                                 max-width: max-content;
+                                font-size: 10px;
                                 background-color: #1e1e1e;
                                 color: #ddd;
                                 letter-spacing: 1px;
@@ -1189,14 +1254,36 @@ body{
                                 cursor: pointer;
     
                             }
+
+                            a {
+                                text-decoration: none;
+                                
+                                button {
+                                    font-size: 12px;
+                                    max-width: max-content;
+                                    background-color: #1e1e1e;
+                                    color: #ddd;
+                                    letter-spacing: 1px;
+                                    padding: 5px;
+                                    border-radius: 8px;
+                                    cursor: pointer;
+        
+                                }
+                            }
+    
+                            button:hover {
+                                background-color: transparent;
+                                padding: 5px;
+                                border-radius: 8px;
+                                cursor: pointer;
+                                color: #1e1e1e;
+                            }
                         }
 
-                        button:hover {
-                            background-color: transparent;
-                            padding: 5px;
-                            border-radius: 8px;
-                            cursor: pointer;
-                            color: #1e1e1e;
+                        .descripcion{
+                            font-size: 12px;
+                            margin-top: 5px;
+                            
                         }
 
                         
@@ -1354,7 +1441,7 @@ body{
         background-image: linear-gradient(to right, #7e7e7e, #909090, #a2a2a2, #b4b4b4, #c7c7c7, #c7c7c7, #c7c7c7, #c7c7c7, #b4b4b4, #a2a2a2, #909090, #7e7e7e);
 
         position: relative;
-        bottom: -271px;
+        bottom: -371px;
         
 
         .container_foot {
@@ -1637,11 +1724,20 @@ body{
                             .precio {
                                 font-size: 14px;
                             }
+                            
+                            .contenedorBotones {
 
-                            button {
-                                padding: 5px;
-                                font-size: 10px;
+                                display: flex;
+                                flex-direction: column;
+                                
+
+                                button {
+                                    padding: 5px;
+                                    font-size: 7px;
+                                }
                             }
+
+
                         }
                     }
                 } 
@@ -1681,10 +1777,16 @@ body{
                                 font-size: 14px;
                             }
 
-                            button {
-                                padding: 5px;
-                                font-size: 10px;
+                            .contenedorBotones {
+                                display: flex;
+                                flex-direction: column;
+                                button {
+                                    padding: 5px;
+                                    font-size: 10px;
+                                }
                             }
+
+
                         }
                     }
                 }                   
@@ -1745,6 +1847,7 @@ body{
                                     textarea {
                                         height: 30px;
                                     }
+                                    
                                 }
                             }
                         }
@@ -2090,11 +2193,15 @@ body{
                             .precio {
                                 font-size: 14px;
                             }
-
-                            button {
-                                padding: 5px;
-                                font-size: 10px;
+                            .contenedorBotones {
+                                display: flex;
+                                flex-direction: column;
+                                button {
+                                    padding: 5px;
+                                    font-size: 10px;
+                                }
                             }
+
                         }
                     }
                 } 
@@ -2133,11 +2240,15 @@ body{
                             .precio {
                                 font-size: 14px;
                             }
-
-                            button {
-                                padding: 5px;
-                                font-size: 10px;
+                            .contenedorBotones {
+                                display: flex;
+                                flex-direction: column;
+                                button {
+                                    padding: 5px;
+                                    font-size: 10px;
+                                }
                             }
+
                         }
                     }
                 }        
@@ -2521,6 +2632,10 @@ body{
                             button {
                                 padding: 5px;
                                 font-size: 12px;
+                            }
+
+                            .descripcion {
+                                font-size: 10px;
                             }
                         }
                     }

@@ -85,10 +85,10 @@
             <h2>Registro</h2>
             <p>Comprá más rápido y ¡en un solo lugar!</p>
             <div class="container_form">
-                <form action="" method="post">
+                <form action="" method="post" id="formularioRegistro">
                     <div class="datos">
                         <label for="name_lastname">Nombre y Apellido</label>
-                        <input type="text" placeholder="EJ: John/Jane Doe" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" id="name_lastname" name="nameuser_register" required>
+                        <input type="text" placeholder="EJ: John/Jane Doe" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" id="fullName" name="nameuser_register" required>
                     </div>
                     <div class="datos">
                         <label for="phone">Telefono (opcional)</label>
@@ -103,8 +103,8 @@
                         <input type="password" name="password_register" id="password" minlength="8" maxlength="12" required placeholder="8 - 12 caracteres">
                     </div>
                     <div class="datos">
-                        <label for="verification_password">Confirmar Contraseña</label>
-                        <input type="password" name="verification_password_register" id="verification_password" minlength="8" maxlength="12" required placeholder="8 - 12 caracteres">
+                        <label for="confirmPassword">Confirmar Contraseña</label>
+                        <input type="password" name="verification_password_register" id="confirmPassword" minlength="8" maxlength="12" required placeholder="8 - 12 caracteres">
                     </div>
 
                     <div class="botones">

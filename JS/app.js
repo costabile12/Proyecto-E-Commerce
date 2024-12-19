@@ -26,12 +26,17 @@ function cargarProductosPorCategoria(categoriaId, contenedorId) {
         card.classList.add("producto_card");
         const url = `/productos/${producto.id}`;
         card.innerHTML = `
-            <a href="${url}"><img src="${producto.imagen}" alt="${producto.titulo}" loading="lazy"></a>
+            <img src="${producto.imagen}" alt="${producto.titulo}" loading="lazy">
             <div class="container_description">
                 <h3>${producto.titulo}</h3>
                 <span class="precio">$${producto.precio}</span>
-                <a href="${url}"><button id="${producto.id}>COMPRAR</button></a>
+                <div class="contenedorBotones">
+                    <button class="btnDescripcion" id="btn_${producto.id}" onclick="mostrarDescripcion('${producto.id}')">Abrir descripción</button>
+                    <button onclick="openProductDetails(${producto.id})">COMPRAR</button>
+                </div>
+                <p class="descripcion" id="descripcion_${producto.id}" style="display:none;">${producto.descripcion}</p>
             </div>    
+         
         `;
         contenedor.appendChild(card);
     });
@@ -51,15 +56,35 @@ function cargarProductosDestacados(contenedorId) {
         card.classList.add("producto_card");
         const url = `/productos/${producto.id}`;
         card.innerHTML = `
-            <a href="${url}"><img src="${producto.img_destacado}" alt="${producto.titulo}" loading="lazy"></a>
+            <img src="${producto.img_destacado}" alt="${producto.titulo}" loading="lazy">
             <div class="container_description">
                 <h3>${producto.titulo}</h3>
                 <span class="precio">$${producto.precio}</span>
-                <a href="${url}"><button id="${producto.id}">COMPRAR</button></a>
+                <div class="contenedorBotones">
+                    <button class="btnDescripcion" id="btn_${producto.id}" onclick="mostrarDescripcion('${producto.id}')">Abrir descripción</button>
+                    <button onclick="openProductDetails(${producto.id})">COMPRAR</button></a>
+                </div>
+                <p class="descripcion" id="descripcion_${producto.id}" style="display:none;">${producto.descripcion}</p>
             </div>    
-        `;
+        
+        `
+        ;
         contenedor.appendChild(card);
     });
+}
+
+// Función para mostrar la descripción del producto
+function mostrarDescripcion(productoId) {
+    const descripcion = document.getElementById(`descripcion_${productoId}`);
+    const boton = document.getElementById(`btn_${productoId}`);
+
+    if (descripcion.style.display === "none") {
+        descripcion.style.display = "block";
+        boton.textContent = "Cerrar descripción"; // Cambiar texto del botón
+    } else {
+        descripcion.style.display = "none";
+        boton.textContent = "Abrir descripción"; // Restaurar texto del botón
+    }
 }
 
 //Funcion mostrar en consola productos disponibles
@@ -78,21 +103,18 @@ function mostrarDisponibles() {
     });
 }
 
-//Funcio para validar un formulario
-function validarFormulario(formularioID) {
-    const nombre = document.getElementById("name").value; // Añadir .value para obtener el valor del input
-    const email = document.getElementById("email").value;
-    const mensaje = document.getElementById("mensaje").value;
-    const password1 = document.getElementById("contraseña1").value;
-    const password2 = document.getElementById("contraseña2").value;
-    const telefono = document.getElementById("telefono").value;
+// Función para validar un formulario de contacto
+function validarFormularioContacto(formularioId) {
+    const nombre = document.getElementById("name").value.trim(); // Añadir .value para obtener el valor del input
+    const email = document.getElementById("email").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
 
     const contenedorErrores = document.getElementById("errores");
 
+    //Expreciones regulares
     const regexNombre = /^[A-Za-záéíóúÁÉÍÓÚüÜñÑ\s]+$/;
     const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const regexPhone = /^\+?(\d{1,3})?[-.\s]?\(?\d{1,4}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}$/;
-    const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
 
     let esValido = true;
     
@@ -105,6 +127,7 @@ function validarFormulario(formularioID) {
         let error = document.createElement("li");
         error.className = "Mensaje_de_error";
         error.textContent = "El campo de nombre es inválido: solo se permiten letras, espacios, apostrofes y guiones";
+        error.style.fontSize = "10px"
         contenedorErrores.appendChild(error);
         esValido = false;
     }
@@ -115,6 +138,7 @@ function validarFormulario(formularioID) {
         let error = document.createElement("li");
         error.className = "Mensaje_de_error";
         error.textContent = "El campo de email es inválido";
+        error.style.fontSize = "10px"
         contenedorErrores.appendChild(error);
         esValido = false;
     }
@@ -125,49 +149,11 @@ function validarFormulario(formularioID) {
         let error = document.createElement("li");
         error.className = "Mensaje_de_error";
         error.textContent = "El campo de mensaje es invalido por ser demasiado corto, mínimo 10 caracteres";
+        error.style.fontSize = "10px"
         contenedorErrores.appendChild(error);
         esValido = false;
     }
 
-    // Validación de teléfono
-    if (!regexPhone.test(telefono)) {
-        console.log("El campo de telefono es invalido");
-        let error = document.createElement("li");
-        error.className = "Mensaje_de_error";
-        error.textContent = "El campo de telefono es invalido";
-        contenedorErrores.appendChild(error);
-        esValido = false;
-    }
-
-    // Validación de contraseña
-    if (!regexPassword.test(password1)) {
-        console.log("El campo de contraseña es invalido");
-        let error = document.createElement("li");
-        error.className = "Mensaje_de_error";
-        error.textContent = "El campo de contraseña es invalido: mínimo 8 caracteres, una letra minúscula, una letra mayúscula, un número y un carácter especial";
-        contenedorErrores.appendChild(error);
-        esValido = false;
-    }
-
-    // Validación de confirmación de contraseña
-    if (!regexPassword.test(password2)) {
-        console.log("El campo de confirmar contraseña es invalido");
-        let error = document.createElement("li");
-        error.className = "Mensaje_de_error";
-        error.textContent = "El campo de confirmar contraseña es invalido: mínimo 8 caracteres, una letra minúscula, una letra mayúscula, un número y un carácter especial";
-        contenedorErrores.appendChild(error);
-        esValido = false;
-    }
-
-    // Validación de que las contraseñas coincidan
-    if (password1 !== password2) {
-        console.log("Las contraseñas no son iguales");
-        let error = document.createElement("li");
-        error.className = "Mensaje_de_error";
-        error.textContent = "Verificar que las contraseñas sean iguales";
-        contenedorErrores.appendChild(error);
-        esValido = false;
-    }
 
     if (esValido) {
         console.log("Formulario verificado");
@@ -176,78 +162,11 @@ function validarFormulario(formularioID) {
     return esValido;
 }
 
-
-// Función para cargar productos por categoría
-function cargarProductosPorCategoria(categoriaId, contenedorId) {
-    const contenedor = document.getElementById(contenedorId);
-    contenedor.innerHTML = ""; // Limpiamos el contenedor
-
-    // Filtrar productos por la categoría
-    const productosFiltrados = productos.filter(
-        producto => producto.categoria.id === categoriaId
-    );
-
-    // Crear las cartas
-    productosFiltrados.forEach(producto => {
-        const card = document.createElement("div");
-        card.classList.add("producto_card");
-        card.innerHTML = `
-                    <a href="${producto.url}"><img src="${producto.imagen}" alt="${producto.titulo}" loading="lazy"></a>
-                    <div class="container_description">
-                        <h3>${producto.titulo}</h3>
-                        <span class="precio">$${producto.precio}</span>
-                        <a href="${producto.url}"><button>COMPRAR</button></a>
-                    </div>    
-        `;
-        contenedor.appendChild(card);
-    });
+// Función para abrir una nueva pestaña y pasar el ID del producto
+function openProductDetails(productId) {
+    // Abre una nueva pestaña con la URL de los detalles del producto, pasando el ID en la URL
+    window.open(`detalles-producto.html?id=${productId}`, '_blank');
 }
-
-// Función para cargar productos destacados
-function cargarProductosDestacados(contenedorId) {
-    const contenedor = document.getElementById(contenedorId);
-    contenedor.innerHTML = ""; // Limpiamos el contenedor
-
-    // Filtrar productos destacados
-    const productosDestacados = productos.filter(producto => producto.destacado);
-
-    // Crear las cartas
-    productosDestacados.forEach(producto => {
-        const card = document.createElement("div");
-        card.classList.add("producto_card");
-        card.innerHTML = `<a href="${producto.url}"><img src="${producto.imagen}" alt="${producto.titulo}" loading="lazy"></a>
-                    <div class="container_description">
-                        <h3>${producto.titulo}</h3>
-                        <span class="precio">$${producto.precio}</span>
-                        <a href="${producto.url}"><button>COMPRAR</button></a>
-                    </div>    
-                </div>
-        `;
-        contenedor.appendChild(card);
-    });
-}
-
-// Cargar productos dinámicamente según la página
-document.addEventListener("DOMContentLoaded", () => {
-    if (document.getElementById("contenedor-destacados")) {
-        cargarProductosDestacados("contenedor-destacados");
-    }
-    if (document.getElementById("contenedor-productos-remeras")) {
-        cargarProductosPorCategoria("remeras", "contenedor-productos-remeras");
-    }
-    if (document.getElementById("pantalonesContainer")) {
-        cargarProductosPorCategoria("pantalones", "pantalonesContainer");
-    }
-    if (document.getElementById("bermudasContainer")) {
-        cargarProductosPorCategoria("bermudas", "bermudasContainer");
-    }
-    if (document.getElementById("camisasContainer")) {
-        cargarProductosPorCategoria("camisas", "camisasContainer");
-    }
-    if (document.getElementById("musculosaContainer")) {
-        cargarProductosPorCategoria("musculosa", "musculosaContainer");
-    }
-});
 
 
 // Inicializar la carga de productos al cargar la página
@@ -258,6 +177,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (document.getElementById("contenedor-destacados")) {
         cargarProductosDestacados("contenedor-destacados");
+        
     }
     if (document.getElementById("contenedorRemeras")) {
         cargarProductosPorCategoria("remeras", "contenedorRemeras");
@@ -275,21 +195,29 @@ document.addEventListener("DOMContentLoaded", async () => {
         cargarProductosPorCategoria("musculosas", "contenedorMusculosas");
     }
 
+    if(document.getElementById("contenedorDetallesProducto")){
+        verDetallesProducto()
+    }
 
-    // Llamar a la función validarFormulario
-    const formulario = document.getElementById("formularioID"); // Suponiendo que tienes un formulario con este id
-    if (formulario) {
-        formulario.addEventListener("submit", (event) => {
-            event.preventDefault();  // Evitar que el formulario se envíe si no es válido
-            if (validarFormulario(formulario.id)) {
-                // Si es válido, puedes proceder con el envío del formulario
-                formulario.submit();  // O cualquier otra acción que desees realizar
+    // Obtener el formulario de contacto por su ID
+    const formularioContacto = document.getElementById("formularioContacto");
+    if (formularioContacto) {
+        formularioContacto.addEventListener("submit", (event) => {
+            event.preventDefault(); // Detiene el envío predeterminado del formulario
+
+            // Validar el formulario
+            if (validarFormularioContacto()) {
+                console.log("Formulario válido, enviando...");
+                formularioContacto.submit(); // Envía el formulario si todo está correcto
+            } else {
+                console.log("Formulario inválido, no se envía.");
             }
         });
     }
+
+
+
     
-
-
 });
 
 

@@ -12,7 +12,11 @@
         "destacado": true,
         "disponible": true,
         "colores":["Negro","Blanco"],
-        "talles":["S","M","L","XL"]
+        "talles":["S","M","L","XL"],
+        "descripcion":" Fabricada con materiales suaves y transpirables, disponible en varios colores y estilos.",
+        "urlDestacado":"../page/remera_1.html",
+        "url":"./page/remera_1.html",
+        "cantidad":1
     
     },
     {
@@ -28,7 +32,11 @@
         "destacado": true,
         "disponible": true,
         "colores":["Negro","Blanco","Azul","Rojo"],
-        "talles":["S","M","L","XL"]
+        "talles":["S","M","L","XL"],
+        "descripcion":" Fabricada con materiales suaves y transpirables, disponible en varios colores y estilos.",
+        "urlDestacado":"../page/remera2.html",
+        "url":"./page/remera2.html",
+        "cantidad":1
     },
     {
         "id":"remera-03",
@@ -43,7 +51,11 @@
         "destacado": true,
         "disponible": true,
         "colores":["Negro","Blanco","Gris"],
-        "talles":["S","M","L","XL"]
+        "talles":["S","M","L","XL"],
+        "descripcion":" Fabricada con materiales suaves y transpirables, disponible en varios colores y estilos.",
+        "urlDestacado":"../page/remera3.html",
+        "url":"../page/remera3.html",
+        "cantidad":1
     },
     {
         "id":"remera-04",
@@ -58,7 +70,11 @@
         "destacado": false,
         "disponible": true,
         "colores":["Rojo","Negro","Blanco"],
-        "talles":["S","M","L","XL"]
+        "talles":["S","M","L","XL"],
+        "descripcion":" Fabricada con materiales suaves y transpirables, disponible en varios colores y estilos.",
+        "urlDestacado":"../page/remera4.html",
+        "url":"../page/remera4.html",
+        "cantidad":1
     },
     {
         "id":"remera-05",
@@ -73,7 +89,11 @@
         "destacado": false,
         "disponible": true,
         "colores":["Negro","Blanco"],
-        "talles":["S","M","L","XL"]
+        "talles":["S","M","L","XL"],
+        "descripcion":" Fabricada con materiales suaves y transpirables, disponible en varios colores y estilos.",
+        "urlDestacado":"../page/remera5.html",
+        "url":"../page/remera5.html",
+        "cantidad":1
     
     },
     
@@ -91,7 +111,11 @@
         "destacado":false,
         "disponible": true,
         "colores":["Azul"],
-        "talles":["S","M","L","XL"]
+        "talles":["S","M","L","XL"],
+        "descripcion":" Disponible en colores modernos que te permitirán crear múltiples looks.",
+        "urlDestacado":"../page/pantalon1.html",
+        "url":"./page/pantalon1.html",
+        "cantidad":1
     },
     {
         "id":"pantalon-02",
@@ -106,7 +130,12 @@
         "destacado":true,
         "disponible": true,
         "colores":["Azul","Celeste"],
-        "talles":["S","M","L","XL"]
+        "talles":["S","M","L","XL"],
+        "descripcion":" Disponible en colores modernos que te permitirán crear múltiples looks.",
+        "urlDestacado":"../page/pantalon2.html",
+        "url":"./page/pantalon2.html",
+        "cantidad":1
+
     },
     {
         "id":"pantalon-03",
@@ -121,7 +150,12 @@
         "destacado":false,
         "disponible": true,
         "colores":["Negro","Verde","Beige"],
-        "talles":["S","M","L","XL"]
+        "talles":["S","M","L","XL"],
+        "descripcion":" Disponible en colores modernos que te permitirán crear múltiples looks.",
+        "urlDestacado":"../page/pantalon3.html",
+        "url":"./page/pantalon3.html",
+        "cantidad":1
+
     
     },
     
@@ -138,7 +172,12 @@
         "destacado":false,
         "disponible": true,
         "colores":["Negro","Gris"],
-        "talles":["S","M","XL"]
+        "talles":["S","M","XL"],
+        "descripcion":" Bermuda de estilo relajado y cómodo, ideal para climas cálidos.",
+        "urlDestacado":"../page/bermuda1.html",
+        "url":"./page/bermuda1.html",
+        "cantidad":1
+
     
     },
     
@@ -155,7 +194,12 @@
         "destacado": false,
         "disponible": true,
         "colores":["Negro","Blanco","Azul","Rojo","Rosa"],
-        "talles":["S","M","L","XL"]
+        "talles":["S","M","L","XL"],
+        "descripcion" : "Confeccionada con tejidos suaves que brindan comodidad durante todo el día, esta camisa es la opción ideal tanto para un look casual como para un estilo más formal.",
+        "urlDestacado":"../page/camisa1.html",
+        "url":"./page/camisa1.html",
+        "cantidad":1
+
     },
     {
         "id":"camisa-02",
@@ -170,7 +214,11 @@
         "destacado": true,
         "disponible": true,
         "colores":["Negro","Blanco","Verde","Rojo"],
-        "talles":["S","M","L","XL"]
+        "talles":["S","M","L","XL"],
+        "descripcion" : "Confeccionada con tejidos suaves que brindan comodidad durante todo el día, esta camisa es la opción ideal tanto para un look casual como para un estilo más formal.",
+        "urlDestacado":"../page/camisa2.html",
+        "url":"./page/camisa2.html",
+        "cantidad":1
     },
     
     {
@@ -186,7 +234,12 @@
         "destacado": true,
         "disponible": false,
         "colores":["Negro","Blanco","Beige","Azul"],
-        "talles":["S","M","L","XL"]
+        "talles":["S","M","L","XL"],
+        "descripcion" : "Confeccionada con tejidos suaves que brindan comodidad durante todo el día, esta camisa es la opción ideal tanto para un look casual como para un estilo más formal.",
+        "urlDestacado":"../page/camisa3.html",
+        "url":"./page/camisa3.html",
+        "cantidad":1
+        
     },
     
     
@@ -203,7 +256,11 @@
         "destacado": false,
         "disponible": true,
         "colores":["Negro","Blanco","Amarillo","Rosa"],
-        "talles":["S","M","L","XL"]
+        "talles":["S","M","L","XL"],
+        "descripcion":"Musculosa ligera y cómoda, ideal para el verano o para hacer deporte",
+        "urlDestacado":"../page/musculosa1.html",
+        "url":"./page/musculosa1.html",
+        "cantidad":1
     },
     
     
@@ -220,6 +277,8 @@
         "destacado": false,
         "disponible": false,
         "colores":["Beige"],
-        "talles":["M","L"]
+        "talles":["M","L"],
+        "descripcion" :"Campera de abrigo perfecta para la temporada de entretiempo",
+        "cantidad":1
     }
 ]
